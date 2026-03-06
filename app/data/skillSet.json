@@ -1,0 +1,31 @@
+{
+  "ProgrammingLanguages": [
+    { "name": "JavaScript", "img_url": "/skillImages/jsS.png" },
+    { "name": "TypeScript", "img_url": "/skillImages/tsC.svg" },
+    { "name": "HTML5", "img_url": "/skillImages/htmlS.png" },
+    { "name": "CSS3", "img_url": "/skillImages/cssS.png" },
+    { "name": "C", "img_url": "/skillImages/CS.png" },
+    { "name": "Java", "img_url": "/skillImages/javaS.png" },
+    { "name": "Python", "img_url": "/skillImages/pythonS.png" },
+    { "name": "Swift", "img_url": "/skillImages/swiftS.png" }
+  ],
+  "Frameworks": [
+    { "name": "React", "img_url": "/skillImages/reactS.png" },
+    { "name": "Next.js", "img_url": "/skillImages/nextS.png" },
+    { "name": "Node.js", "img_url": "/skillImages/nodeS.png" },
+    { "name": "Express.js", "img_url": "/skillImages/expressS.png" },
+    { "name": "Flask", "img_url": "/skillImages/flaskS.png" },
+    { "name": "FastAPI", "img_url": "/skillImages/fastapiS.png" },
+    { "name": "TailwindCSS", "img_url": "/skillImages/tailwindS.png" },
+    { "name": "Framer Motion", "img_url": "/skillImages/framerS.png" }
+  ],
+  "Tools": [
+    { "name": "Git", "img_url": "/skillImages/gitS.png" },
+    { "name": "Figma", "img_url": "/skillImages/figmaS.png" },
+    { "name": "Firebase", "img_url": "/skillImages/firebaseS.png" },
+    { "name": "SQLite", "img_url": "/skillImages/sqliteS.png" },
+    { "name": "SQLAlchemy", "img_url": "/skillImages/sqlalchemyS.png" },
+    { "name": "Gemini", "img_url": "/skillImages/geminiS.png" },
+    { "name": "Rive", "img_url": "/skillImages/riveS.png" }
+  ]
+}

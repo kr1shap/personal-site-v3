@@ -1,0 +1,16 @@
+{
+  "volunteer": [
+    {
+      "title": "Graphics Director @ GDG",
+      "description": "Designing graphics for Google Developer Club Scarbrough",
+      "bullets": ["Dummy bullet point 1", "Dummy bullet point 2"],
+      "img": "https://www.utsc.utoronto.ca/cms/sites/utsc.utoronto.ca.cms/files/styles/3_1_full_width_banner/public/images/page/Header%20image%201600x%20.jpg?h=d82dd7ab&itok=XT8-EA-G"
+    },
+    {
+      "title": "Graphic Design Assoc @ UTMIST",
+      "description": "Working with director and VP marketing to design visually-appealing graphics for UTMIST brand.",
+      "bullets": ["Dummy bullet point 1", "Dummy bullet point 2"],
+      "img": "https://www.utmist.ca/_next/static/media/utmist-logo-large.f1a7b56c.svg"
+    }
+  ]
+}

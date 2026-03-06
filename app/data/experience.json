@@ -1,0 +1,22 @@
+{
+  "experience": [
+    {
+      "role": "Software Developer",
+      "company": "RBC",
+      "location": "toronto",
+      "description": "Incoming Winter 2026!",
+      "bullets": ["Dummy bullet point 1", "Dummy bullet point 2"],
+      "img": "public/rbclogo.webp",
+      "date": "winter 2026"
+    },
+    {
+      "role": "Student Web Developer",
+      "company": "BizZone Inc.",
+      "location": "gormley, ON",
+      "description": "∙Evaluated client websites against appropriate standards\n ∙Designed Figma bootstrap elements and concepts for clients",
+      "bullets": ["Dummy bullet point 1", "Dummy bullet point 2"],
+      "img": "https://d2q79iu7y748jz.cloudfront.net/s/_logo/ccfa256d196e5e73331612529de95104",
+      "date": "winter 2023"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
+export default function CustomCursor() {
+  const cursorRef = useRef<HTMLDivElement | null>(null);
+  const rafRef = useRef<number | null>(null);
+  const currentXRef = useRef(0);
+  const currentYRef = useRef(0);
+  const targetXRef = useRef(0);
+  const targetYRef = useRef(0);
+
+  useEffect(() => {
+    const hasFinePointer = window.matchMedia(
+      "(hover: hover) and (pointer: fine)",
+    ).matches;
+
+    if (!hasFinePointer || !cursorRef.current) {
+      return;
+    }
+
+    const cursorEl = cursorRef.current;
+    cursorEl.style.opacity = "1";
+
+    const isInteractiveTarget = (target: EventTarget | null) => {
+      const element =
+        target instanceof Element
+          ? target
+          : target instanceof Node
+            ? target.parentElement
+            : null;
+
+      if (!element) return false;
+
+      return Boolean(
+        element.closest(
+          'button, a, [role="button"], input, select, textarea, summary, label',
+        ),
+      );
+    };
+
+    const animate = () => {
+      currentXRef.current += (targetXRef.current - currentXRef.current) * 0.28;
+      currentYRef.current += (targetYRef.current - currentYRef.current) * 0.28;
+
+      cursorEl.style.transform = `translate3d(${currentXRef.current}px, ${currentYRef.current}px, 0)`;
+      rafRef.current = window.requestAnimationFrame(animate);
+    };
+
+    const handleMouseMove = (event: MouseEvent) => {
+      targetXRef.current = event.clientX;
+      targetYRef.current = event.clientY;
+
+      if (isInteractiveTarget(event.target)) {
+        cursorEl.classList.add("is-hover-interactive");
+      } else {
+        cursorEl.classList.remove("is-hover-interactive");
+      }
+    };
+
+    const handleMouseEnter = () => {
+      cursorEl.style.opacity = "1";
+    };
+
+    const handleMouseLeave = () => {
+      cursorEl.style.opacity = "0";
+      cursorEl.classList.remove("is-hover-interactive");
+      cursorEl.classList.remove("is-pressed");
+    };
+
+    const handleMouseDown = (event: MouseEvent) => {
+      if (isInteractiveTarget(event.target)) {
+        cursorEl.classList.add("is-pressed");
+      }
+    };
+
+    const handleMouseUp = () => {
+      cursorEl.classList.remove("is-pressed");
+    };
+
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    window.addEventListener("mouseenter", handleMouseEnter, { passive: true });
+    window.addEventListener("mouseleave", handleMouseLeave, { passive: true });
+    window.addEventListener("mousedown", handleMouseDown, { passive: true });
+    window.addEventListener("mouseup", handleMouseUp, { passive: true });
+    window.addEventListener("blur", handleMouseUp, { passive: true });
+
+    rafRef.current = window.requestAnimationFrame(animate);
+
+    return () => {
+      if (rafRef.current) {
+        window.cancelAnimationFrame(rafRef.current);
+      }
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseenter", handleMouseEnter);
+      window.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener("mousedown", handleMouseDown);
+      window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("blur", handleMouseUp);
+    };
+  }, []);
+
+  return (
+    <div
+      ref={cursorRef}
+      className="custom-cursor"
+      aria-hidden="true"
+      style={{ pointerEvents: "none" }}
+    />
+  );
+}
