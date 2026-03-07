@@ -1,31 +1,61 @@
 {
   "ProgrammingLanguages": [
-    { "name": "JavaScript", "img_url": "/skillImages/jsS.png" },
-    { "name": "TypeScript", "img_url": "/skillImages/tsC.svg" },
-    { "name": "HTML5", "img_url": "/skillImages/htmlS.png" },
-    { "name": "CSS3", "img_url": "/skillImages/cssS.png" },
-    { "name": "C", "img_url": "/skillImages/CS.png" },
-    { "name": "Java", "img_url": "/skillImages/javaS.png" },
-    { "name": "Python", "img_url": "/skillImages/pythonS.png" },
-    { "name": "Swift", "img_url": "/skillImages/swiftS.png" }
+    { "name": "JS/TS", "img_url": "skillImages/javascript.svg" },
+    { "name": "Python", "img_url": "skillImages/python.svg" },
+    { "name": "Java", "img_url": "skillImages/openjdk.svg" },
+    { "name": "C", "img_url": "skillImages/c.svg" },
+    { "name": "R", "img_url": "skillImages/r.svg" },
+    {
+      "name": "Swift",
+      "img_url": "/skillImages/swift.svg",
+      "isFavourite": true
+    },
+    { "name": "Bash/Shell", "img_url": "/skillImages/gnubash.svg" },
+    { "name": "HTML5", "img_url": "/skillImages/html5.svg" },
+    { "name": "CSS3", "img_url": "/skillImages/css.svg" }
   ],
-  "Frameworks": [
-    { "name": "React", "img_url": "/skillImages/reactS.png" },
-    { "name": "Next.js", "img_url": "/skillImages/nextS.png" },
-    { "name": "Node.js", "img_url": "/skillImages/nodeS.png" },
-    { "name": "Express.js", "img_url": "/skillImages/expressS.png" },
-    { "name": "Flask", "img_url": "/skillImages/flaskS.png" },
-    { "name": "FastAPI", "img_url": "/skillImages/fastapiS.png" },
-    { "name": "TailwindCSS", "img_url": "/skillImages/tailwindS.png" },
-    { "name": "Framer Motion", "img_url": "/skillImages/framerS.png" }
+  "FrameworksTools": [
+    { "name": "React", "img_url": "/skillImages/react.svg" },
+    { "name": "Next.js", "img_url": "/skillImages/nextdotjs.svg" },
+    { "name": "TailwindCSS", "img_url": "/skillImages/tailwindcss.svg" },
+    {
+      "name": "Framer Motion",
+      "img_url": "/skillImages/framer.svg",
+      "isFavourite": true
+    },
+    { "name": "Node.js", "img_url": "/skillImages/nodedotjs.svg" },
+    { "name": "Flask", "img_url": "/skillImages/flask.svg" },
+    { "name": "FastAPI", "img_url": "/skillImages/fastapi.svg" },
+    { "name": "Spring Boot", "img_url": "/skillImages/spring.svg" },
+    { "name": "Kafka", "img_url": "/skillImages/apachekafka.svg" }
   ],
-  "Tools": [
-    { "name": "Git", "img_url": "/skillImages/gitS.png" },
-    { "name": "Figma", "img_url": "/skillImages/figmaS.png" },
-    { "name": "Firebase", "img_url": "/skillImages/firebaseS.png" },
-    { "name": "SQLite", "img_url": "/skillImages/sqliteS.png" },
-    { "name": "SQLAlchemy", "img_url": "/skillImages/sqlalchemyS.png" },
-    { "name": "Gemini", "img_url": "/skillImages/geminiS.png" },
-    { "name": "Rive", "img_url": "/skillImages/riveS.png" }
+  "Databases": [
+    { "name": "MongoDB", "img_url": "/skillImages/mongodb.svg" },
+    { "name": "PostgreSQL", "img_url": "/skillImages/postgresql.svg" },
+    { "name": "SQLite", "img_url": "/skillImages/sqlite.svg" },
+    { "name": "SQLAlchemy", "img_url": "/skillImages/sqlalchemy.svg" },
+    { "name": "Firebase", "img_url": "/skillImages/firebase.svg" },
+    { "name": "Supabase", "img_url": "/skillImages/supabase.svg" }
+  ],
+  "DevOps_Cloud": [
+    { "name": "AWS S3 SDK", "img_url": "/skillImages/awsS3S.png" },
+    { "name": "Git", "img_url": "/skillImages/git.svg" },
+    { "name": "OCP", "img_url": "/skillImages/redhatopenshift.svg" },
+    { "name": "Docker", "img_url": "/skillImages/docker.svg" },
+    { "name": "Kubernetes", "img_url": "/skillImages/kubernetes.svg" }
+  ],
+  "Tools_Other": [
+    {
+      "name": "Figma",
+      "img_url": "/skillImages/figma.svg",
+      "isFavourite": true
+    },
+    { "name": "Rive", "img_url": "/skillImages/rive.svg" },
+    {
+      "name": "SonarQube",
+      "img_url": "/skillImages/sonarqubeforide.svg"
+    },
+    { "name": "Aqua", "img_url": "/skillImages/aqua.svg" },
+    { "name": "Snyk", "img_url": "/skillImages/snyk.svg" }
   ]
 }

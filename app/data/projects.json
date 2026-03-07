@@ -1,76 +1,114 @@
 {
-  "projects": [
+  "mobile": [
     {
       "title": "Smart Air",
-      "stack": "Java Native, Android Studio, Firebase",
-      "description": "A child-friendly app for asthma, along with parent management and provider viewing! (I was also a very good scrum master)",
-      "bullets": ["Dummy bullet point 1", "Dummy bullet point 2"],
+      "stack": "Java, XML, Firebase, Android Studio, Mockito",
+      "description": "Developed a kid-friendly Android app for asthma management, with parent management and provider viewing. Led the project as Scrum Master and implemented robust testing and architecture patterns.",
+      "bullets": [
+        "Selected among 30+ groups to work with an external partner organization (project showcase).",
+        "Designed an authentication workflow using MVP & SOLID principles to separate concerns and improve testability.",
+        "Achieved 100% presenter test coverage with 20+ JUnit/Mockito tests to ensure presenter reliability and maintainability.",
+        "Led Git-based development as Scrum Master: maintained Jira stories, ran scrums, and reviewed 8+ pull requests."
+      ],
       "img": "smartair.png",
       "url": "https://github.com/kr1shap/smart-air",
       "date": "november 2025"
     },
     {
       "title": "UniMap",
-      "stack": "Swift, SwiftUI, FastAPI",
-      "description": "UniMap is an iOS application designed to bring UTSC students closer together, providing a hub for all events on campus. Developed a user event upload functionality on a Swift iOS application using MVVM architecture, implementing form validation, custom feedback patterns, focus-state control, and dynamic styling for a smooth user experience.",
-      "bullets": ["Dummy bullet point 1", "Dummy bullet point 2"],
+      "stack": "Swift, SwiftUI, Supabase, FastAPI",
+      "description": "Mobile app for student-run events, providing a hub to browse and upload campus events. Built with SwiftUI and Supabase for backend data management.",
+      "bullets": [
+        "Managed event data using Supabase (Postgres) to support 20+ events and user accounts.",
+        "Applied MVVM architecture, lifecycle management, and dependency injection (EnvironmentObject) across 8+ views.",
+        "Implemented form validation, focus-state control, and dynamic styling for a robust event upload flow."
+      ],
       "img": "unimap.png",
       "url": "https://github.com/Whooses/Unimap",
       "date": "may 2025"
     },
     {
       "title": "Calendrier",
-      "stack": "Swift, PencilKit, SwiftData, Rive",
-      "description": "Calendrier is an iOS-based note-taking application using SwiftData (for data persistence), providing users with a clean and simple (yet cute!) interface for managing text and drawing notes. Utilized Swiftdata for data persistence, while maintaining a unique, accessible UI.",
-      "bullets": ["Dummy bullet point 1", "Dummy bullet point 2"],
+      "stack": "Swift, SwiftUI, PencilKit, SwiftData, Rive",
+      "description": "An iOS note-taking app combining text and drawing using SwiftData and PencilKit. Focused on accessibility and smooth, expressive UI interactions.",
+      "bullets": [
+        "Used SwiftData for reliable local persistence of notes and drawing data.",
+        "Applied MVVM/MVC principles to separate UI, logic, and data for maintainability.",
+        "Implemented Core Animation and SwiftUI transitions to optimize responsiveness and user engagement."
+      ],
       "img": "calendrier.png",
       "url": "https://github.com/kr1shap/calendrier",
       "date": "august 2025"
-    },
+    }
+  ],
+  "webdev": [
     {
       "title": "WellGlobe | TerraHacks 25'",
-      "stack": "React, Typescript, FastAPI, Gemini",
-      "description": "A smart travel health companion that gives you real-time advisories, vaccine checklists, and personalized safety tips so you can explore the world confidently and safely.",
-      "bullets": ["Dummy bullet point 1", "Dummy bullet point 2"],
+      "stack": "React, FastAPI, Gemini AI, Google Maps API",
+      "description": "Travel advisory prototype delivering real-time safety insights with an AI-integrated chatbot and geolocation. Built under a 36-hour hackathon to surface contextual safety guidance and vaccine checklists.",
+      "bullets": [
+        "Delivered a travel advisory prototype providing real-time safety insights via an AI-integrated chatbot (Gemini) and geolocation (Google Maps API).",
+        "Developed a responsive and accessible user flow across 5+ pages with React, ensuring WCAG-compliant design.",
+        "Created 7+ RESTful endpoints in Python with FastAPI under a 36-hour Agile sprint, ensuring secure API integration."
+      ],
       "img": "wg.png",
       "url": "https://devpost.com/software/wellglobe",
       "date": "july 2025"
     },
     {
+      "title": "Eatery Crit",
+      "stack": "React (TypeScript), Tailwind CSS, Framer Motion, Flask, SQLite/SQLAlchemy, Redis",
+      "description": "Secure full-stack restaurant review app with a responsive React frontend and Flask backend. Implemented user auth, ratings, and performant UI with Framer Motion and Tailwind CSS.",
+      "bullets": [
+        "Built a secure full-stack web app for restaurant exploration and reviews using React (TypeScript) and Flask.",
+        "Designed and configured 10+ REST API endpoints to handle restaurant listings, reviews, and queries with SQL.",
+        "Optimized animations and UI responsiveness using Framer Motion and Tailwind CSS, enhancing UX flows.",
+        "Used Redis for caching to improve response latency for frequently-accessed listings."
+      ],
+      "img": "eaterycritt.png",
+      "url": "https://github.com/kr1shap/eaterycritt",
+      "date": "august 2025"
+    }
+  ],
+  "other": [
+    {
       "title": "Fireboy and Watergirl",
-      "stack": "Java, Java Swing API",
-      "description": "Implementation of Fireboy and Watergirl puzzle-platformer, with javax.swing library. This project recreates the mechanics of the original game with multiple levels, cooperative character control, collectible diamonds, and enemies, using classes, threads, Java Swing API, and OOP logic.",
-      "bullets": ["Dummy bullet point 1", "Dummy bullet point 2"],
+      "stack": "Java, Java Swing, JavaFX",
+      "description": "Multithreaded 2D platformer implementing core mechanics, cooperative controls, collectible systems, and performant rendering using Java Swing and JavaFX.",
+      "bullets": [
+        "Implemented a multithreaded 2D platformer with 50+ FPS real-time rendering and responsive controls.",
+        "Used Java Swing & JavaFX APIs with event-driven programming to improve responsiveness by ~30%.",
+        "Architected 10+ modular, extensible classes for players, levels, and entities to streamline future features."
+      ],
       "img": "firewater.png",
       "url": "https://github.com/kr1shap/fireboy-watergirl",
       "date": "january 2024"
     },
     {
-      "title": "EateryCrit",
-      "stack": "React, TailwindCSS + Flask, SQLite/SQLAlchemy",
-      "description": "A dynamic restaurant review web application built with React, TailwindCSS, Framer Motion, and TypewriterJS on the frontend, with a Flask + SQL backend handling user authentication, ratings, and AI-generated images (images in the future!). Users can browse restaurants and submit ratings. The app features smooth animations and a responsive design.",
-      "bullets": ["Dummy bullet point 1", "Dummy bullet point 2"],
-      "img": "eaterycritt.png",
-      "url": "https://github.com/kr1shap/eaterycritt",
-      "date": "august 2025"
-    },
-    {
-      "title": "Async Battleship",
-      "stack": "C, [Node.js (in the future!)]",
-      "description": "An asynchronous C server for Battleship using select(), non-blocking I/O, and socket programming to handle multiple concurrent clients with robust error handling.",
-      "bullets": ["Dummy bullet point 1", "Dummy bullet point 2"],
+      "title": "Asynchronous Battleship Server",
+      "stack": "C, Linux",
+      "description": "High-concurrency TCP server for Battleship built with low-level socket APIs and select() to manage many simultaneous clients efficiently.",
+      "bullets": [
+        "Built a high-concurrency TCP server using sockets and select() to support 100+ simultaneous connections.",
+        "Applied low-level networking concepts and socket/port management to reliably handle client input and communication.",
+        "Implemented real-time signal handlers and descriptor flags to prevent blocking, reducing socket errors by 90%."
+      ],
       "img": "async_ship.png",
       "url": "https://github.com/kr1shap/async-battleship",
-      "date": "july 2025"
+      "date": "august 2025"
     },
     {
-      "title": "Tetris | MIPS32 Assembly",
-      "stack": "Assembly, lots of patience",
-      "description": "Implemented a simplified version of the classic Tetris game using MIPS assembly. Features real-time piece movement, rotation, collision detection, line clearing, and score tracking, all rendered on a memory-mapped framebuffer. Optimized low-level logic and display routines to handle game state updates efficiently on limited hardware.",
-      "bullets": ["Dummy bullet point 1", "Dummy bullet point 2"],
+      "title": "Low-level Tetris",
+      "stack": "Assembly, MIPS-32",
+      "description": "A simplified Tetris implementation using MIPS-32 assembly, focusing on real-time piece movement, rotation, collision detection, and efficient low-level routines.",
+      "bullets": [
+        "Implemented real-time piece movement, rotation, and collision detection using the MIPS-32 ISA.",
+        "Automated repetitive low-level routines (e.g., input polling) with the stack to streamline display rates by ~10%.",
+        "Applied computer architecture concepts by managing registers, memory, and control flow at the instruction level."
+      ],
       "img": "tetris.png",
       "url": "https://github.com/kr1shap/tetris-assembly",
-      "date": "august 2025"
+      "date": "july 2025"
     }
   ]
 }
