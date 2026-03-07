@@ -15,8 +15,8 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
-import type { ExperienceEntry } from "../types/experience";
-import type { ProjectEntry } from "../types/projects";
+import type { ExperienceEntry } from "../../types/experience";
+import type { ProjectEntry } from "../../types/projects";
 
 /* ---------- Prop types ---------- */
 
@@ -104,7 +104,7 @@ export default function DetailPopup(props: DetailPopupProps) {
           type="button"
           className="
             absolute top-4 right-5 z-30 bg-transparent border-none cursor-pointer
-            font-['Gamja_Flower',system-ui,sans-serif] text-2xl text-(--dull-blue)
+            text-2xl text-(--dull-blue)
             leading-none px-2 py-1 rounded-full transition-colors duration-150
             hover:bg-(--close-hover-bg) hover:text-(--bright-blue)
             focus-visible:bg-(--close-hover-bg) focus-visible:text-(--bright-blue)
@@ -141,7 +141,7 @@ export default function DetailPopup(props: DetailPopupProps) {
           </div>
 
           {/* Meta column */}
-          <div className="flex-1 flex flex-col gap-0 font-['Gamja_Flower',system-ui,sans-serif] min-w-0">
+          <div className="flex-1 flex flex-col gap-0 min-w-0">
             {/* Primary title */}
             <p className="text-[2.5rem] max-sm:text-[1.75rem] text-(--dull-blue) leading-tight m-0 wrap-break-word">
               {title}
@@ -165,29 +165,20 @@ export default function DetailPopup(props: DetailPopupProps) {
                 {date}
               </p>
             )}
-
-            {/* Decorative placeholder illustration — hidden on small screens */}
-            <Image
-              src="/myselflol.png"
-              alt=""
-              aria-hidden="true"
-              width={187}
-              height={187}
-              className="mt-auto pt-4 w-full max-w-46.75 aspect-square object-contain hidden sm:block"
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).src = "/lumaBlue.png";
-              }}
-            />
           </div>
         </div>
 
         {/* ---- Bottom section: description + bullets ---- */}
-        <div className="mt-6 font-['Gamja_Flower',system-ui,sans-serif] text-(--dull-grey) text-[1.5rem] max-sm:text-[1.125rem] leading-relaxed">
+        <div className="mt-6 text-(--dull-grey) text-[1.3rem] max-sm:text-[1.125rem] leading-relaxed">
           {/* Short description paragraph */}
-          {description && <p className="m-0 mb-2">{description}</p>}
+          {description && (
+            <p className="max-sm:text-[1.1rem] text-[1.2rem] text-(--dull-blue) font-bold m-0 mb-2">
+              {description}
+            </p>
+          )}
 
           {/* Bullet points */}
-          {bullets && bullets.length > 0 && (
+          {bullets && bullets?.length > 0 && (
             <ul className="m-0 pl-6 list-disc flex flex-col gap-[0.15rem]">
               {bullets.map((point, i) => (
                 <li key={i} className="leading-relaxed">

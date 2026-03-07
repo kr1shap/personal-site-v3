@@ -7,7 +7,7 @@
  * Figma ref: node 1:329
  */
 
-import type { ProjectEntry } from "../types/projects";
+import type { ProjectEntry } from "../../types/projects";
 import Image from "next/image";
 
 interface ProjectCardProps {

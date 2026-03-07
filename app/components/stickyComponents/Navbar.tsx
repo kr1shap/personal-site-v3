@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -12,14 +12,33 @@ const NAV_LINKS = [
   { label: "contact", href: "#contact", top: "46%", right: "14%" },
 ];
 
-export default function Navbar() {
+export default function NavBar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 8);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
+      <nav
+        className={
+          "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:px-8 transition-colors duration-300" +
+          (scrolled
+            ? " bg-linear-to-b from-[rgba(20,30,60,0.38)] to-transparent backdrop-blur-sm"
+            : "")
+        }
+      >
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5 sm:gap-3 select-none">
+        <a
+          href="#home"
+          className="flex items-center gap-2.5 sm:gap-3 select-none"
+        >
           <div className="relative w-11 h-11 sm:w-12.5 sm:h-12.5 rounded-full overflow-hidden shrink-0">
             <Image
               src="/lumaBlue.png"
@@ -30,7 +49,7 @@ export default function Navbar() {
             />
           </div>
           <span
-            className="font-['Gamja_Flower'] text-[1.75rem] sm:text-[2rem] leading-none"
+            className="text-[1.75rem] sm:text-[2rem] leading-none"
             style={{ color: "var(--dull-blue)" }}
           >
             kp
@@ -43,7 +62,7 @@ export default function Navbar() {
             <li key={link.label}>
               <a
                 href={link.href}
-                className="font-['Gamja_Flower'] text-[1.65rem] xl:text-[2rem] text-(--dull-blue) hover:text-(--dark-blue) transition-colors duration-200"
+                className="text-[1.65rem] xl:text-[2rem] text-(--dull-blue) hover:text-(--dark-blue) transition-colors duration-200"
                 style={{ textShadow: "0 2px 8px rgba(69,99,149,0.15)" }}
               >
                 {link.label}
@@ -100,7 +119,7 @@ export default function Navbar() {
                   key={label}
                   href={href}
                   onClick={() => setMobileOpen(false)}
-                  className="fixed z-50 lg:hidden font-['Gamja_Flower'] text-[2.25rem] text-(--cream)"
+                  className="fixed z-50 lg:hidden text-[2.25rem] text-(--cream)"
                   style={{
                     top,
                     ...("left" in pos

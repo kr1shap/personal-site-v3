@@ -13,7 +13,7 @@ export default function SkillBadge({
 }: SkillBadgeProps) {
   return (
     <div className={`inline-flex flex-col items-center w-fit ${className}`}>
-      <div className="relative w-28 h-28 rounded-full overflow-hidden shrink-0">
+      <div className="relative w-28 h-28 overflow-hidden shrink-0">
         <Image
           src={imageSrc || "/lumaBlue.png"}
           alt={`${name} icon`}
