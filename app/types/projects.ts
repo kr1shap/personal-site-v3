@@ -9,5 +9,7 @@ export interface ProjectEntry {
 }
 
 export interface ProjectsData {
-  projects: ProjectEntry[];
+  mobile: ProjectEntry[];
+  webdev: ProjectEntry[];
+  other: ProjectEntry[];
 }
