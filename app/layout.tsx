@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import CustomCursor from "@/app/components/CustomCursor";
 import Navbar from "@/app/components/stickyComponents/Navbar";
+import InitialLoadGate from "@/app/components/InitialLoadGate";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -36,7 +37,7 @@ export default function RootLayout({
       >
         <CustomCursor />
         <Navbar />
-        {children}
+        <InitialLoadGate>{children}</InitialLoadGate>
       </body>
     </html>
   );
