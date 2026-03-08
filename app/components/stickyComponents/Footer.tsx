@@ -22,7 +22,7 @@ export default function Footer() {
       className="w-full px-3 pb-8 pt-6 sm:px-6 md:px-10 lg:px-14 xl:px-16"
     >
       <div className="mx-auto w-full max-w-7xl border-b-2 border-(--dull-blue) pb-5 sm:pb-6">
-        <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-5">
+        <div className="flex items-center justify-between gap-x-6">
           <div className="flex items-center gap-3 sm:gap-4 ">
             <p className="text-[clamp(2.25rem,8vw,3.75rem)] leading-[0.9] flex items-center text-(--dark-blue)">
               krisha&apos;s
