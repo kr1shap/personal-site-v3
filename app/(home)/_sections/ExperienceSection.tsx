@@ -1,25 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import type { ExperienceEntry } from "@/app/types/experience";
 import ExperienceCard from "@/app/components/cards/ExperienceCard";
 import DetailPopup from "@/app/components/cards/DetailPopup";
 
-export default function ExperienceSection() {
-  const [entries, setEntries] = useState<ExperienceEntry[]>([]);
+interface ExperienceSectionProps {
+  entries: ExperienceEntry[];
+}
+
+export default function ExperienceSection({ entries }: ExperienceSectionProps) {
   const [selected, setSelected] = useState<ExperienceEntry | null>(null);
-
-  useEffect(() => {
-    fetch("/api/experience")
-      .then((r) => r.json())
-      .then((data: { experience: ExperienceEntry[] }) => {
-        let list = data.experience ?? [];
-
-        setEntries(list);
-      })
-      .catch(() => {});
-  }, []);
 
   if (entries.length === 0) return null;
 
@@ -31,17 +23,14 @@ export default function ExperienceSection() {
       className="w-full px-4 py-20 sm:px-8 md:px-12 lg:px-16 xl:px-20"
     >
       <div className="mx-auto w-full max-w-6xl">
-        <h2
-          className="text-[clamp(3.125rem,13vw,7.5rem)] leading-[0.95] mb-10 lg:mb-14"
-          style={{ color: "var(--dull-blue)" }}
-        >
+        <h2 className="text-[clamp(3.125rem,13vw,7.5rem)] leading-[0.95] mb-10 lg:mb-14 text-(--dull-blue)">
           experience
         </h2>
         {/* Mobile — stacked cards with arrow images between them */}
         <div className="flex flex-col items-center md:hidden">
           <ExperienceCard
-            experience={visibleEntries[0]}
-            onClick={() => setSelected(visibleEntries[0])}
+            experience={visibleEntries[2]}
+            onClick={() => setSelected(visibleEntries[2])}
           />
 
           <Image
@@ -68,8 +57,8 @@ export default function ExperienceSection() {
           />
 
           <ExperienceCard
-            experience={visibleEntries[2]}
-            onClick={() => setSelected(visibleEntries[2])}
+            experience={visibleEntries[0]}
+            onClick={() => setSelected(visibleEntries[0])}
           />
         </div>
 

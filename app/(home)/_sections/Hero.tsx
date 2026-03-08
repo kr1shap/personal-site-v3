@@ -10,14 +10,13 @@ export default function Hero() {
       <div className="flex w-full flex-col lg:hidden">
         {/* Greeting — full-width top line */}
         <p className="text-[clamp(2rem,10.5vw,2.8rem)] leading-tight text-black whitespace-nowrap">
-          &apos;ello! my name is
+          hello! my name is
         </p>
 
         {/* "krisha" + mascot side by side */}
         <div className="flex items-center justify-between">
           <p
-            className="text-[clamp(5.2rem,24vw,6rem)] leading-none"
-            style={{ color: "var(--dull-blue)" }}
+            className="text-[clamp(5.2rem,24vw,6rem)] leading-none text-(--dull-blue)"
           >
             krisha
           </p>
@@ -51,11 +50,10 @@ export default function Hero() {
         {/* Left text block */}
         <div className="flex flex-col">
           <p className="text-[clamp(3.5rem,7vw,7.5rem)] leading-tight text-black whitespace-nowrap">
-            &apos;ello! my name is
+            hello! my name is
           </p>
           <p
-            className="text-[clamp(6rem,12vw,12.5rem)] leading-[0.88] -mt-2 ml-3"
-            style={{ color: "var(--dull-blue)" }}
+            className="text-[clamp(6rem,12vw,12.5rem)] leading-[0.88] -mt-2 ml-3 text-(--dull-blue)"
           >
             krisha
           </p>

@@ -9,8 +9,8 @@ export default function ContactSection() {
       className="w-full px-4 pb-20 pt-20 sm:px-8 md:px-12 lg:px-16 xl:px-20"
     >
       <div className="mx-auto w-full max-w-6xl">
-        <div className="flex flex-col-reverse gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
-          <div className="flex w-full flex-col gap-5 text-(--dark-blue) lg:max-w-2xl lg:gap-8">
+        <div className="flex w-full items-start justify-between gap-4 sm:gap-8 lg:gap-16">
+          <div className="flex w-full min-w-0 flex-col gap-5 text-(--dark-blue) lg:max-w-2xl lg:gap-8">
             <a
               href="https://www.linkedin.com/in/kriishap"
               target="_blank"
@@ -46,15 +46,12 @@ export default function ContactSection() {
             </a>
           </div>
 
-          <div className="w-full text-right lg:w-auto lg:pt-2">
-            <h2
-              className="text-[clamp(3.125rem,13vw,7.5rem)] leading-[0.95]"
-              style={{ color: "var(--dull-blue)" }}
-            >
+          <div className="w-auto shrink-0 text-right lg:pt-2">
+            <h2 className="text-[clamp(3.125rem,13vw,7.5rem)] leading-[0.95] text-(--dull-blue)">
               contact
             </h2>
             <p className="-mt-1 text-[clamp(1.5rem,4.2vw,2.5rem)] leading-none text-(--dull-grey)">
-              trust me i'll answer :)
+              trust me i&apos;ll answer :)
             </p>
           </div>
         </div>

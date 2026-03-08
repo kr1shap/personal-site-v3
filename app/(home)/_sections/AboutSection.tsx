@@ -17,17 +17,14 @@ export default function AboutSection() {
           />
         </div>
 
-        <div className="pr-4  order-1 lg:order-2 w-full max-w-2xl text-right lg:text-left">
-          <h2
-            className="text-[clamp(3.125rem,13vw,7.5rem)] leading-[0.95]"
-            style={{ color: "var(--dull-blue)" }}
-          >
+        <div className="pr-4 order-1 lg:order-2 w-full max-w-2xl text-right lg:text-left">
+          <h2 className="text-[clamp(3.125rem,13vw,7.5rem)] leading-[0.95] text-(--dull-blue)">
             about me
           </h2>
 
           <div className="mt-3 space-y-4 text-[clamp(1rem,5vw,2rem)] leading-snug text-black lg:mt-4 lg:space-y-5">
             <p>
-              I'm a second (mayyybe third) year student at UofT, specializing in
+              I&apos;m a second (mayyybe third) year student at UofT, specializing in
               CS as well as minoring in stats + linguistics.
             </p>
 

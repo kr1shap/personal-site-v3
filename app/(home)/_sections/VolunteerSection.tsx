@@ -1,26 +1,18 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import type { VolunteerEntry } from "@/app/types/volunteer";
 
-interface VolunteerEntry {
-  title: string;
-  img: string;
+interface VolunteerSectionProps {
+  entries: VolunteerEntry[];
 }
 
 const ROTATIONS = [-4, 2.5, -3, 5, -2, 3.5];
 
-export default function VolunteerSection() {
-  const [entries, setEntries] = useState<VolunteerEntry[]>([]);
+export default function VolunteerSection({ entries }: VolunteerSectionProps) {
   const constraintsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    fetch("/api/volunteer")
-      .then((r) => r.json())
-      .then((data) => setEntries(data?.volunteer ?? []))
-      .catch(() => {});
-  }, []);
 
   if (!entries.length) return null;
 

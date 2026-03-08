@@ -6,24 +6,31 @@ import ProjectsSection from "./_sections/ProjectsSection";
 import SkillsSection from "./_sections/SkillsSection";
 import ContactSection from "./_sections/ContactSection";
 import Footer from "@/app/components/stickyComponents/Footer";
+import {
+  getExperienceData,
+  getProjectsData,
+  getSkillSetData,
+  getVolunteerData,
+} from "@/app/lib/portfolioData";
 
 export default function Home() {
+  const experienceData = getExperienceData();
+  const projectsData = getProjectsData();
+  const skillSetData = getSkillSetData();
+  const volunteerData = getVolunteerData();
+
   return (
-    <main
-      className="min-h-screen w-full flex flex-col items-center justify-center"
-      style={{ backgroundColor: "var(--cream)" }}
-    >
+    <main className="min-h-screen w-full flex flex-col items-center justify-center bg-(--cream)">
       <div className="flex flex-col items-center justify-center flex-1 w-full">
         <Hero />
         <AboutSection />
-        <VolunteerSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <SkillsSection />
+        <VolunteerSection entries={volunteerData.volunteer} />
+        <ExperienceSection entries={experienceData.experience} />
+        <ProjectsSection projects={projectsData} />
+        <SkillsSection skillSet={skillSetData} />
         <ContactSection />
       </div>
       <Footer />
-      {/* Future sections go here */}
     </main>
   );
 }

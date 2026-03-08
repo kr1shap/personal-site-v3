@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ProjectCard from "@/app/components/cards/ProjectCard";
 import DetailPopup from "@/app/components/cards/DetailPopup";
 import type { ProjectEntry, ProjectsData } from "@/app/types/projects";
@@ -12,20 +12,14 @@ const CATEGORY_LABELS: Record<keyof ProjectsData, string> = {
   other: "other",
 };
 
-export default function ProjectsSection() {
-  const [projects, setProjects] = useState<ProjectsData | null>(null);
+interface ProjectsSectionProps {
+  projects: ProjectsData;
+}
+
+export default function ProjectsSection({ projects }: ProjectsSectionProps) {
   const [selectedProject, setSelectedProject] = useState<ProjectEntry | null>(
     null,
   );
-
-  useEffect(() => {
-    fetch("/api/projects")
-      .then((response) => response.json())
-      .then((data: ProjectsData) => setProjects(data))
-      .catch(() => {});
-  }, []);
-
-  if (!projects) return null;
 
   return (
     <section
@@ -33,12 +27,14 @@ export default function ProjectsSection() {
       className="w-full px-4 py-20 sm:px-8 md:px-12 lg:px-16 xl:px-20"
     >
       <div className="mx-auto w-full max-w-6xl">
-        <h2
-          className="text-[clamp(3.125rem,13vw,7.5rem)] leading-[0.95] mb-8 lg:mb-12"
-          style={{ color: "var(--dull-blue)" }}
-        >
-          projects
-        </h2>
+        <div>
+          <h2 className="text-[clamp(3.125rem,13vw,7.5rem)] leading-[0.95] mb-4 lg:mb-5 text-(--dull-blue)">
+            projects
+          </h2>
+          <p className="-mt-1 mb-5 text-[clamp(1.5rem,4.2vw,2.5rem)] leading-none text-(--dull-grey)">
+            scroll horizontally to see more :)
+          </p>
+        </div>
 
         <div className="flex flex-col gap-8 sm:gap-10 lg:gap-12">
           {CATEGORY_ORDER.map((category) => {
