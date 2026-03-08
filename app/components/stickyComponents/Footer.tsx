@@ -1,3 +1,12 @@
+/**
+ * Footer
+ * ------
+ * Site footer with quick contact links and mascot. Kept intentionally
+ * compact and responsive — used at the bottom of the main page.
+ *
+ * No external dependencies; purely presentational.
+ */
+
 import Image from "next/image";
 
 const FOOTER_LINKS = [
@@ -16,7 +25,7 @@ export default function Footer() {
         <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-5">
           <div className="flex items-center gap-3 sm:gap-4 ">
             <p className="text-[clamp(2.25rem,8vw,3.75rem)] leading-[0.9] flex items-center text-(--dark-blue)">
-              krisha's
+              krisha&apos;s
               <br />
               website
             </p>

@@ -4,7 +4,6 @@
  * Displays a summary card for a single work experience entry.
  * Click / tap the card to open the DetailPopup.
  *
- * Figma ref: node 1:197
  */
 
 import type { ExperienceEntry } from "../../types/experience";

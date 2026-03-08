@@ -1,3 +1,12 @@
+/**
+ * RoundedButton
+ * -------------
+ * Reusable rounded call-to-action button with a chunky border and
+ * shadow. Keep the label concise for best visual results.
+ *
+ * Props: `label`, optional `onClick`.
+ */
+
 interface RoundedButtonProps {
   label: string;
   onClick?: () => void;

@@ -8,7 +8,6 @@
  *   <DetailPopup isOpen={open} onClose={() => setOpen(false)} type="project" data={project} />
  *   <DetailPopup isOpen={open} onClose={() => setOpen(false)} type="experience" data={exp} />
  *
- * Figma ref: node 1:185
  */
 
 "use client";
@@ -17,8 +16,6 @@ import { useEffect } from "react";
 import Image from "next/image";
 import type { ExperienceEntry } from "../../types/experience";
 import type { ProjectEntry } from "../../types/projects";
-
-/* ---------- Prop types ---------- */
 
 type DetailPopupBase = {
   isOpen: boolean;
@@ -37,7 +34,6 @@ type ExperiencePopupProps = DetailPopupBase & {
 
 type DetailPopupProps = ProjectPopupProps | ExperiencePopupProps;
 
-/* ---------- Component ---------- */
 
 export default function DetailPopup(props: DetailPopupProps) {
   const { isOpen, onClose, type, data } = props;

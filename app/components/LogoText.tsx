@@ -1,3 +1,12 @@
+/**
+ * LogoText
+ * --------
+ * Small inline component combining an optional symbol/logo with
+ * stylized text used across the site for link-like brand labels.
+ *
+ * Props: `text`, optional `logoSrc` or `symbol` (ReactNode).
+ */
+
 import Image from "next/image";
 import type { ReactNode } from "react";
 

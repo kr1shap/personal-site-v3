@@ -1,3 +1,13 @@
+/**
+ * SpeechBubble
+ * ------------
+ * Small animated bubble for short inline annotations (e.g. "fav!").
+ * Uses Framer Motion for a subtle float animation; ideal for small
+ * labels attached to badges or cards.
+ *
+ * Props: `text`, optional `className` for further styling.
+ */
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -13,6 +23,7 @@ export default function SpeechBubble({
 }: SpeechBubbleProps) {
   return (
     <motion.div
+      initial={false}
       className={`inline-flex w-fit ${className}`}
       animate={{ y: [0, -6, 0] }}
       transition={{ duration: 1.6, ease: "easeInOut", repeat: Infinity }}

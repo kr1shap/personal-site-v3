@@ -1,3 +1,15 @@
+/**
+ * IconLabelButton
+ * ---------------
+ * Simple button combining a square icon and a label. Accepts an
+ * `imageSrc`, `label`, and optional click handler. Designed to be
+ * lightweight and styleable via `className`, `iconClassName`, and
+ * `labelClassName` props.
+ *
+ * Usage:
+ * <IconLabelButton label="languages" imageSrc="/bluebutton.png" />
+ */
+
 import Image from "next/image";
 
 interface IconLabelButtonProps {

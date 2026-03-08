@@ -1,3 +1,12 @@
+/**
+ * NavBar
+ * ------
+ * Top navigation bar with desktop links and a mobile scattered menu.
+ * Handles scroll state styling and a toggleable mobile experience menu.
+ *
+ * Keep link list in `NAV_LINKS` (label, href, optional positioning).
+ */
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -48,10 +57,7 @@ export default function NavBar() {
               className="object-cover"
             />
           </div>
-          <span
-            className="text-[1.75rem] sm:text-[2rem] leading-none"
-            style={{ color: "var(--dull-blue)" }}
-          >
+          <span className="text-[1.75rem] sm:text-[2rem] leading-none text-(--dull-blue)">
             kp
           </span>
         </a>
@@ -82,6 +88,7 @@ export default function NavBar() {
           {[0, 1, 2].map((i) => (
             <motion.span
               key={i}
+              initial={false}
               className="block h-0.75 w-7 rounded-full origin-center"
               style={{ backgroundColor: "var(--dull-blue)" }}
               animate={
@@ -98,7 +105,7 @@ export default function NavBar() {
       </nav>
 
       {/* Mobile full-screen scattered menu */}
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {mobileOpen && (
           <>
             <motion.div

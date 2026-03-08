@@ -1,3 +1,14 @@
+/**
+ * CustomCursor
+ * ------------
+ * Lightweight custom cursor implementation that follows mouse movement
+ * and adds interactive/pressed states for UI elements. Only active on
+ * devices that support a fine pointer (`(hover: hover) and (pointer: fine)`).
+ *
+ * Usage: include <CustomCursor /> at app root (e.g. layout) so it can
+ * listen globally to pointer events.
+ */
+
 "use client";
 
 import { useEffect, useRef } from "react";
