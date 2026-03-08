@@ -38,7 +38,7 @@
     { "name": "Supabase", "img_url": "/skillImages/supabase.svg" }
   ],
   "DevOps_Cloud": [
-    { "name": "AWS S3 SDK", "img_url": "/skillImages/awsS3S.png" },
+    { "name": "AWS S3 SDK", "img_url": "/skillImages/awsc.png" },
     { "name": "Git", "img_url": "/skillImages/git.svg" },
     { "name": "OCP", "img_url": "/skillImages/redhatopenshift.svg" },
     { "name": "Docker", "img_url": "/skillImages/docker.svg" },

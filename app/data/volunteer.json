@@ -2,18 +2,26 @@
   "volunteer": [
     {
       "title": "Graphics Director @ GDG",
+      "description": "Designed visual assets and event graphics.",
+      "bullets": [],
       "img": "/gdglogo.png"
     },
     {
       "title": "Graphic Design Assoc @ UTMIST",
+      "description": "Created posters and promotional creatives.",
+      "bullets": [],
       "img": "/utmistlogo.png"
     },
-     {
+    {
       "title": "Graphic Design Director @ GenAI",
+      "description": "Led branding and design direction for initiatives.",
+      "bullets": [],
       "img": "/genailogo.svg"
     },
-     {
+    {
       "title": "Course Rep @ AMACSS UTSC",
+      "description": "Supported student feedback and course communication.",
+      "bullets": [],
       "img": "/amacsslogo.svg"
     }
   ]

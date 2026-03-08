@@ -10,7 +10,7 @@
         "Achieved 100% presenter test coverage with 20+ JUnit/Mockito tests to ensure presenter reliability and maintainability.",
         "Led Git-based development as Scrum Master: maintained Jira stories, ran scrums, and reviewed 8+ pull requests."
       ],
-      "img": "smartair.png",
+      "img": "projImages/smartair.png",
       "url": "https://github.com/kr1shap/smart-air",
       "date": "november 2025"
     },
@@ -23,7 +23,7 @@
         "Applied MVVM architecture, lifecycle management, and dependency injection (EnvironmentObject) across 8+ views.",
         "Implemented form validation, focus-state control, and dynamic styling for a robust event upload flow."
       ],
-      "img": "unimap.png",
+      "img": "projImages/unimap.png",
       "url": "https://github.com/Whooses/Unimap",
       "date": "may 2025"
     },
@@ -36,7 +36,7 @@
         "Applied MVVM/MVC principles to separate UI, logic, and data for maintainability.",
         "Implemented Core Animation and SwiftUI transitions to optimize responsiveness and user engagement."
       ],
-      "img": "calendrier.png",
+      "img": "projImages/calendrier.png",
       "url": "https://github.com/kr1shap/calendrier",
       "date": "august 2025"
     }
@@ -51,7 +51,7 @@
         "Developed a responsive and accessible user flow across 5+ pages with React, ensuring WCAG-compliant design.",
         "Created 7+ RESTful endpoints in Python with FastAPI under a 36-hour Agile sprint, ensuring secure API integration."
       ],
-      "img": "wg.png",
+      "img": "projImages/wg.png",
       "url": "https://devpost.com/software/wellglobe",
       "date": "july 2025"
     },
@@ -65,7 +65,7 @@
         "Optimized animations and UI responsiveness using Framer Motion and Tailwind CSS, enhancing UX flows.",
         "Used Redis for caching to improve response latency for frequently-accessed listings."
       ],
-      "img": "eaterycritt.png",
+      "img": "projImages/eaterycritt.png",
       "url": "https://github.com/kr1shap/eaterycritt",
       "date": "august 2025"
     }
@@ -80,7 +80,7 @@
         "Used Java Swing & JavaFX APIs with event-driven programming to improve responsiveness by ~30%.",
         "Architected 10+ modular, extensible classes for players, levels, and entities to streamline future features."
       ],
-      "img": "firewater.png",
+      "img": "projImages/firewater.png",
       "url": "https://github.com/kr1shap/fireboy-watergirl",
       "date": "january 2024"
     },
@@ -93,7 +93,7 @@
         "Applied low-level networking concepts and socket/port management to reliably handle client input and communication.",
         "Implemented real-time signal handlers and descriptor flags to prevent blocking, reducing socket errors by 90%."
       ],
-      "img": "async_ship.png",
+      "img": "projImages/async_ship.png",
       "url": "https://github.com/kr1shap/async-battleship",
       "date": "august 2025"
     },
@@ -106,7 +106,7 @@
         "Automated repetitive low-level routines (e.g., input polling) with the stack to streamline display rates by ~10%.",
         "Applied computer architecture concepts by managing registers, memory, and control flow at the instruction level."
       ],
-      "img": "tetris.png",
+      "img": "projImages/tetris.png",
       "url": "https://github.com/kr1shap/tetris-assembly",
       "date": "july 2025"
     }

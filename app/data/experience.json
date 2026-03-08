@@ -11,25 +11,25 @@
         "Engineered user-centric web forms with HTML, SQL and PHP, coordinating deadlines with a 4-person UX team.",
         "Developed reusable UI, WCAG 2.1 compliant components using Bootstrap principles, reducing build time by 20%."
       ],
-      "img": "/bizzoneelbem.png",
+      "img": "/expImages/bizzoneelbem.png",
       "date": "winter 2023"
     },
     {
-      "role": "Software Developer",
+      "role": "Software Dev Intern",
       "company": "RBC",
-      "location": "toronto",
+      "location": "toronto, ON",
       "description": "Working in global asset mgmt (GAM) to help maintain applications and build new ones to streamline internal services.",
       "bullets": [],
-      "img": "/rbcelbem.png",
+      "img": "/expImages/rbcelbem.png",
       "date": "winter 2026"
     },
     {
       "role": "(SWE) Mobile Engineer",
       "company": "Capital One",
-      "location": "toronto",
+      "location": "toronto, ON",
       "description": "incoming summer 2026!",
       "bullets": [],
-      "img": "/c1elbem.png",
+      "img": "/expImages/c1elbem.png",
       "date": "summer 2026"
     }
   ]
