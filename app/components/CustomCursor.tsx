@@ -15,6 +15,7 @@ import { useEffect, useRef } from "react";
 
 export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement | null>(null);
+  const dotRef = useRef<HTMLDivElement | null>(null);
   const rafRef = useRef<number | null>(null);
   const currentXRef = useRef(0);
   const currentYRef = useRef(0);
@@ -26,12 +27,14 @@ export default function CustomCursor() {
       "(hover: hover) and (pointer: fine)",
     ).matches;
 
-    if (!hasFinePointer || !cursorRef.current) {
+    if (!hasFinePointer || !cursorRef.current || !dotRef.current) {
       return;
     }
 
     const cursorEl = cursorRef.current;
+    const dotEl = dotRef.current;
     cursorEl.style.opacity = "1";
+    dotEl.style.opacity = "1";
 
     const isInteractiveTarget = (target: EventTarget | null) => {
       const element =
@@ -50,11 +53,17 @@ export default function CustomCursor() {
       );
     };
 
+    // Offset so the image's visual tip aligns with the true pointer hotspot.
+    // Adjust HOTSPOT_Y if the cursor still feels misaligned vertically.
+    const HOTSPOT_X = 10;
+    const HOTSPOT_Y = 15;
+
     const animate = () => {
       currentXRef.current += (targetXRef.current - currentXRef.current) * 0.28;
       currentYRef.current += (targetYRef.current - currentYRef.current) * 0.28;
 
-      cursorEl.style.transform = `translate3d(${currentXRef.current}px, ${currentYRef.current}px, 0)`;
+      cursorEl.style.transform = `translate3d(${currentXRef.current - HOTSPOT_X}px, ${currentYRef.current - HOTSPOT_Y}px, 0)`;
+      dotEl.style.transform = `translate3d(calc(${currentXRef.current}px - 50%), calc(${currentYRef.current}px - 50%), 0)`;
       rafRef.current = window.requestAnimationFrame(animate);
     };
 
@@ -64,29 +73,35 @@ export default function CustomCursor() {
 
       if (isInteractiveTarget(event.target)) {
         cursorEl.classList.add("is-hover-interactive");
+        dotEl.classList.add("is-hover-interactive");
       } else {
         cursorEl.classList.remove("is-hover-interactive");
+        dotEl.classList.remove("is-hover-interactive");
       }
     };
 
     const handleMouseEnter = () => {
       cursorEl.style.opacity = "1";
+      dotEl.style.opacity = "1";
     };
 
     const handleMouseLeave = () => {
       cursorEl.style.opacity = "0";
-      cursorEl.classList.remove("is-hover-interactive");
-      cursorEl.classList.remove("is-pressed");
+      dotEl.style.opacity = "0";
+      cursorEl.classList.remove("is-hover-interactive", "is-pressed");
+      dotEl.classList.remove("is-hover-interactive", "is-pressed");
     };
 
     const handleMouseDown = (event: MouseEvent) => {
       if (isInteractiveTarget(event.target)) {
         cursorEl.classList.add("is-pressed");
+        dotEl.classList.add("is-pressed");
       }
     };
 
     const handleMouseUp = () => {
       cursorEl.classList.remove("is-pressed");
+      dotEl.classList.remove("is-pressed");
     };
 
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
@@ -112,11 +127,19 @@ export default function CustomCursor() {
   }, []);
 
   return (
-    <div
-      ref={cursorRef}
-      className="custom-cursor"
-      aria-hidden="true"
-      style={{ pointerEvents: "none" }}
-    />
+    <>
+      <div
+        ref={cursorRef}
+        className="custom-cursor"
+        aria-hidden="true"
+        style={{ pointerEvents: "none" }}
+      />
+      <div
+        ref={dotRef}
+        className="cursor-dot"
+        aria-hidden="true"
+        style={{ pointerEvents: "none" }}
+      />
+    </>
   );
 }
