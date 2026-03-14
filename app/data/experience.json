@@ -1,6 +1,5 @@
 {
   "experience": [
-    
     {
       "role": "Student Web Developer",
       "company": "BizZone Inc.",
@@ -19,7 +18,13 @@
       "company": "RBC",
       "location": "toronto, ON",
       "description": "Working in global asset mgmt (GAM) to help maintain applications and build new ones to streamline internal services.",
-      "bullets": [],
+      "bullets": [
+        "Upgraded legacy Java services to Spring Boot 4 and Java 25 using AWS SDK v2, improving compatibility with modern cloud integrations.",
+        "Increased unit test coverage by 70+% on legacy microservices to over 80%, reducing pipeline scan failures by 30%.",
+        "Designed and implemented GitHub Actions CI/CD workflows to automate build, test, and deployment pipelines; integrated sonarqube, Synk and DAST scans.",
+        "Utilized OpenShift (OCP) logs and platform tooling to debug and troubleshoot distributed service issues in containerized environments.",
+        "Developed Kafka producers and consumers for event-driven services, including designing and evolving Avro schemas and Kafka security with TLS and Kerberos."
+      ],
       "img": "/expImages/rbcelbem.png",
       "date": "winter 2026"
     },
@@ -27,7 +32,7 @@
       "role": "(SWE) Mobile Engineer",
       "company": "Capital One",
       "location": "toronto, ON",
-      "description": "incoming summer 2026!",
+      "description": "incoming summer 2026, working on the C1 Travel mobile app!",
       "bullets": [],
       "img": "/expImages/c1elbem.png",
       "date": "summer 2026"
