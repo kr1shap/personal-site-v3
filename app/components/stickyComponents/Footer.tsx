@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const FOOTER_LINKS = [
   { label: "github", href: "https://github.com/kr1shap" },
-  { label: "linkedin", href: "www.linkedin.com/in/kriishap" },
+  { label: "linkedin", href: "https://linkedin.com/in/kriishap" },
   { label: "krisha9845@gmail.com", href: "mailto:krisha9845@gmail.com" },
 ];
 
