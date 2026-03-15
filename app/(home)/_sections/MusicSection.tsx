@@ -1,4 +1,3 @@
-import { FaApple, FaArrowUpRightFromSquare } from "react-icons/fa6";
 import ApplePlaylistEmbed from "@/app/components/ApplePlaylistEmbed";
 
 export default function MusicSection() {
