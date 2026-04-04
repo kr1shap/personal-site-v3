@@ -1,18 +1,13 @@
 # krisha's portfolio ✦
 
-My personal portfolio website — a playful, hand-drawn-ish space for my projects, experience, skills, and contact info.
+My personal portfolio website!!! Please like it!!!!!!
 
-> built with care, tiny stars, and lots of dull-blue 💙
+> built with care (of course)
 
 ## Tech stack
 
-- Next.js 16 (App Router)
-- React 19
-- TypeScript
-- Tailwind CSS v4
-- Framer Motion
-- React Icons
+pretty obvious
 
 ---
 
-If you're reading this: hi! thanks for visiting my little corner of the internet ✿
+hi! thanks for visiting btw

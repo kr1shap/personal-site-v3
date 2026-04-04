@@ -1,5 +1,5 @@
 /**
- * RoundedButton
+ * RoundedButtonText
  * -------------
  * Reusable rounded call-to-action button with a chunky border and
  * shadow. Keep the label concise for best visual results.
@@ -7,12 +7,12 @@
  * Props: `label`, optional `onClick`.
  */
 
-interface RoundedButtonProps {
+interface RoundedButtonTextProps {
   label: string;
   onClick?: () => void;
 }
 
-export default function RoundedButton({ label, onClick }: RoundedButtonProps) {
+export default function RoundedButtonText({ label, onClick }: RoundedButtonTextProps) {
   return (
     <button
       type="button"

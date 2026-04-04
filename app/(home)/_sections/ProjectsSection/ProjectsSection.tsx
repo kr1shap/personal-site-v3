@@ -1,16 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import ProjectCard from "@/app/components/cards/ProjectCard";
-import DetailPopup from "@/app/components/cards/DetailPopup";
-import type { ProjectEntry, ProjectsData } from "@/app/types/projects";
-
-const CATEGORY_ORDER: Array<keyof ProjectsData> = ["mobile", "webdev", "other"];
-const CATEGORY_LABELS: Record<keyof ProjectsData, string> = {
-  mobile: "mobile",
-  webdev: "more web dev",
-  other: "other",
-};
+import ProjectCard from "@/app/components/Cards/ProjectCard";
+import DetailPopup from "@/app/components/Cards/DetailPopup";
+import type { ProjectEntry, ProjectsData } from "@/app/lib/types/projects";
+import { CATEGORY_ORDER, CATEGORY_LABELS } from "./projectsSection.constants";
 
 interface ProjectsSectionProps {
   projects: ProjectsData;

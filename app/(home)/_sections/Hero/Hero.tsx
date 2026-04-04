@@ -25,6 +25,7 @@ export default function Hero() {
               src="/lumaBlue.png"
               alt="mascot"
               fill
+              loading="eager"
               sizes="35vw"
               className="object-contain"
               priority

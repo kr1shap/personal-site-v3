@@ -12,7 +12,7 @@
 
 import Image from "next/image";
 
-interface IconLabelButtonProps {
+interface IconTextButtonProps {
   label: string;
   imageSrc: string;
   onClick?: () => void;
@@ -21,14 +21,14 @@ interface IconLabelButtonProps {
   labelClassName?: string;
 }
 
-export default function IconLabelButton({
+export default function IconTextButton({
   label,
   imageSrc,
   onClick,
   className = "",
   iconClassName = "",
   labelClassName = "",
-}: IconLabelButtonProps) {
+}: IconTextButtonProps) {
   return (
     <button
       type="button"

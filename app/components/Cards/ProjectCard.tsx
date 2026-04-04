@@ -4,10 +4,9 @@
  * Displays a summary card for a single project entry.
  * Click / tap the card to open the DetailPopup.
  *
- * Figma ref: node 1:329
  */
 
-import type { ProjectEntry } from "../../types/projects";
+import type { ProjectEntry } from "../../lib/types/projects";
 import Image from "next/image";
 
 interface ProjectCardProps {

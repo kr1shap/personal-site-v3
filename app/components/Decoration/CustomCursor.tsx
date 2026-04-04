@@ -53,16 +53,11 @@ export default function CustomCursor() {
       );
     };
 
-    // Offset so the image's visual tip aligns with the true pointer hotspot.
-    // Adjust HOTSPOT_Y if the cursor still feels misaligned vertically.
-    const HOTSPOT_X = 10;
-    const HOTSPOT_Y = 15;
-
     const animate = () => {
       currentXRef.current += (targetXRef.current - currentXRef.current) * 0.28;
       currentYRef.current += (targetYRef.current - currentYRef.current) * 0.28;
 
-      cursorEl.style.transform = `translate3d(${currentXRef.current - HOTSPOT_X}px, ${currentYRef.current - HOTSPOT_Y}px, 0)`;
+      cursorEl.style.transform = `translate3d(${currentXRef.current}px, ${currentYRef.current}px, 0)`;
       dotEl.style.transform = `translate3d(calc(${currentXRef.current}px - 50%), calc(${currentYRef.current}px - 50%), 0)`;
       rafRef.current = window.requestAnimationFrame(animate);
     };

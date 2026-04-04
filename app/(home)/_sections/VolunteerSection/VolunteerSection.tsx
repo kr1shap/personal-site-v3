@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import type { VolunteerEntry } from "@/app/types/volunteer";
+import type { VolunteerEntry } from "@/app/lib/types/volunteer";
 
 interface VolunteerSectionProps {
   entries: VolunteerEntry[];

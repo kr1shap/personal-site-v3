@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import type { ExperienceEntry } from "@/app/types/experience";
-import ExperienceCard from "@/app/components/cards/ExperienceCard";
-import DetailPopup from "@/app/components/cards/DetailPopup";
+import type { ExperienceEntry } from "@/app/lib/types/experience";
+import ExperienceCard from "@/app/components/Cards/ExperienceCard";
+import DetailPopup from "@/app/components/Cards/DetailPopup";
 
 interface ExperienceSectionProps {
   entries: ExperienceEntry[];
