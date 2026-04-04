@@ -10,13 +10,13 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 
-interface LogoTextProps {
+interface ContactLinkProps {
   text: string;
   logoSrc?: string;
   symbol?: ReactNode;
 }
 
-export default function LogoText({ text, logoSrc, symbol }: LogoTextProps) {
+export default function ContactLink({ text, logoSrc, symbol }: ContactLinkProps) {
   return (
     <div className="inline-flex w-fit items-center gap-1.5">
       {symbol ? (

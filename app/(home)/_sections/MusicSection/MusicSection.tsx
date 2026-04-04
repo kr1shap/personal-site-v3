@@ -1,4 +1,4 @@
-import ApplePlaylistEmbed from "@/app/components/ApplePlaylistEmbed";
+import ApplePlaylistEmbed from "@/app/components/Decoration/ApplePlaylistEmbed";
 
 export default function MusicSection() {
   return (
@@ -16,7 +16,6 @@ export default function MusicSection() {
               a few tracks that fit the site
             </p>
           </div>
-
         </div>
 
         <div className="relative">

@@ -13,9 +13,8 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/image";
-import type { ExperienceEntry } from "../../types/experience";
-import type { ProjectEntry } from "../../types/projects";
+import type { ExperienceEntry } from "../../lib/types/experience";
+import type { ProjectEntry } from "../../lib/types/projects";
 
 type DetailPopupBase = {
   isOpen: boolean;
@@ -33,7 +32,6 @@ type ExperiencePopupProps = DetailPopupBase & {
 };
 
 type DetailPopupProps = ProjectPopupProps | ExperiencePopupProps;
-
 
 export default function DetailPopup(props: DetailPopupProps) {
   const { isOpen, onClose, type, data } = props;
@@ -115,21 +113,20 @@ export default function DetailPopup(props: DetailPopupProps) {
         </button>
 
         {/* ---- Top section: image + meta ---- */}
-        <div className="flex flex-col sm:flex-row gap-5 sm:gap-5.5 items-start">
-          {/* Main image */}
+        <div className="flex flex-col sm:flex-row gap-5 sm:gap-5.5 items-start sm:items-center">
+          {/* Main image — use intrinsic image sizing so the container wraps */}
           <div
             className="
-              relative w-full sm:w-[55%] sm:max-w-78.5 aspect-314/262 max-sm:aspect-video
+              w-full sm:w-auto sm:max-w-[55%]
               rounded-[1.875rem] overflow-hidden shrink-0
-              shadow-(--modal-shadow)
+              shadow-(--modal-shadow) flex justify-center items-center
             "
           >
-            <Image
+            {/* Not using nextjs image rendering here as it somehow breaks lolll!!!!!  */}
+            <img
               src={image}
               alt={imageAlt}
-              fill
-              sizes="(max-width: 640px) 100vw, 55vw"
-              className="w-full h-full object-cover block"
+              className="max-w-full max-h-[60vh] h-auto block bg-(--cream) object-contain object-center"
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).src = "/lumaBlue.png";
               }}

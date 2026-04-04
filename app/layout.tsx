@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next"
-import CustomCursor from "@/app/components/CustomCursor";
-import Navbar from "@/app/components/stickyComponents/Navbar";
-import InitialLoadGate from "@/app/components/InitialLoadGate";
+import { Analytics } from "@vercel/analytics/next";
+import CustomCursor from "@/app/components/Decoration/CustomCursor";
+import Navbar from "@/app/components/StickyComponents/Navbar";
+import InitialLoadGate from "@/app/components/InitialLoadGate/InitialLoadGate";
 import "./globals.css";
 
 const geistSans = Geist({

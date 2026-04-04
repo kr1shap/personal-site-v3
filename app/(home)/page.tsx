@@ -1,12 +1,12 @@
-import Hero from "./_sections/Hero";
-import AboutSection from "./_sections/AboutSection";
-import VolunteerSection from "./_sections/VolunteerSection";
-import ExperienceSection from "./_sections/ExperienceSection";
-import MusicSection from "./_sections/MusicSection";
-import ProjectsSection from "./_sections/ProjectsSection";
-import SkillsSection from "./_sections/SkillsSection";
-import ContactSection from "./_sections/ContactSection";
-import Footer from "@/app/components/stickyComponents/Footer";
+import Hero from "./_sections/Hero/Hero";
+import AboutSection from "./_sections/AboutSection/AboutSection";
+import VolunteerSection from "./_sections/VolunteerSection/VolunteerSection";
+import ExperienceSection from "./_sections/ExperienceSection/ExperienceSection";
+import MusicSection from "./_sections/MusicSection/MusicSection";
+import ProjectsSection from "./_sections/ProjectsSection/ProjectsSection";
+import SkillsSection from "./_sections/SkillsSections/SkillsSection";
+import ContactSection from "./_sections/ContactSection/ContactSection";
+import Footer from "@/app/components/StickyComponents/Footer";
 import {
   getExperienceData,
   getProjectsData,

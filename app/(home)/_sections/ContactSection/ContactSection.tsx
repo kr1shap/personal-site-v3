@@ -1,4 +1,4 @@
-import LogoText from "@/app/components/LogoText";
+import LogoText from "@/app/components/ContactLink/ContactLink";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 

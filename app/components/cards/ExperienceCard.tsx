@@ -6,7 +6,7 @@
  *
  */
 
-import type { ExperienceEntry } from "../../types/experience";
+import type { ExperienceEntry } from "../../lib/types/experience";
 import Image from "next/image";
 
 interface ExperienceCardProps {

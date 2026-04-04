@@ -1,12 +1,12 @@
-import type { ExperienceData } from "@/app/types/experience";
-import type { ProjectsData } from "@/app/types/projects";
-import type { SkillSet } from "@/app/types/skillSet";
-import type { VolunteerData } from "@/app/types/volunteer";
+import type { ExperienceData } from "@/app/lib/types/experience";
+import type { ProjectsData } from "@/app/lib/types/projects";
+import type { SkillSet } from "@/app/lib/types/skillSet";
+import type { VolunteerData } from "@/app/lib/types/volunteer";
 
-import experienceData from "@/app/data/experience.json";
-import projectsData from "@/app/data/projects.json";
-import skillSetData from "@/app/data/skillSet.json";
-import volunteerData from "@/app/data/volunteer.json";
+import experienceData from "./data/experience.json";
+import projectsData from "./data/projects.json";
+import skillSetData from "./data/skillSet.json";
+import volunteerData from "./data/volunteer.json";
 
 export function getExperienceData(): ExperienceData {
   return experienceData as ExperienceData;

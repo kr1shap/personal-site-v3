@@ -1,21 +1,18 @@
 "use client";
 
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
-import type { Skill, SkillSet } from "@/app/types/skillSet";
-import IconLabelButton from "@/app/components/IconLabelButton";
-import SkillBadge from "@/app/components/SkillBadge";
-import SpeechBubble from "@/app/components/SpeechBubble";
-
-const CATEGORY_LABELS: Record<keyof SkillSet, string> = {
-  ProgrammingLanguages: "languages",
-  FrameworksTools: "frameworks/libs",
-  Databases: "databases",
-  DevOps_Cloud: "devops",
-  Tools_Other: "tools",
-};
-
-const CATEGORY_KEYS = Object.keys(CATEGORY_LABELS) as (keyof SkillSet)[];
-const CATEGORY_ICON = "/bluebutton.png";
+import type { Skill, SkillSet } from "@/app/lib/types/skillSet";
+import IconLabelButton from "@/app/components/IconTextButton/IconTextButton";
+import SkillBadge from "@/app/components/SkillBadge/SkillBadge";
+import SpeechBubble from "@/app/components/Decoration/SpeechBubble";
+import {
+  CATEGORY_ICON,
+  CATEGORY_KEYS,
+  CATEGORY_LABELS,
+  getSkillItemMotionProps,
+  getSkillsGridMotionProps,
+} from "./skillsSection.constants";
 
 interface SkillsSectionProps {
   skillSet: SkillSet;
@@ -25,7 +22,8 @@ export default function SkillsSection({ skillSet }: SkillsSectionProps) {
   const [activeCategory, setActiveCategory] = useState<keyof SkillSet>(
     "ProgrammingLanguages",
   );
-
+  const prefersReducedMotion = useReducedMotion();
+  const shouldReduceMotion = prefersReducedMotion ?? false;
   const activeSkills: Skill[] = skillSet[activeCategory] ?? [];
 
   return (
@@ -61,33 +59,37 @@ export default function SkillsSection({ skillSet }: SkillsSectionProps) {
                     ? "drop-shadow-[0_0_0.35rem_rgba(20,91,210,0.35)]"
                     : ""
                 }`}
-                labelClassName={`${
-                  isActive ? "text-(--bright-blue)" : "text-(--dull-grey)"
-                }`}
               />
             );
           })}
         </div>
 
         {/* Skill badges grid */}
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-x-4 gap-y-6 sm:gap-x-6 sm:gap-y-8 justify-items-center">
-          {activeSkills.map((skill) => (
-            <div
-              key={skill.name}
-              className="relative flex flex-col items-center"
-            >
-              {skill.isFavourite && (
-                <div className="absolute -top-10 sm:-top-12 z-10">
-                  <SpeechBubble
-                    text="fav!"
-                    className="px-0! py-0! scale-[0.65] sm:scale-75 origin-bottom"
-                  />
-                </div>
-              )}
-              <SkillBadge name={skill.name} imageSrc={skill.img_url} />
-            </div>
-          ))}
-        </div>
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={activeCategory}
+            className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-x-4 gap-y-6 sm:gap-x-6 sm:gap-y-8 justify-items-center"
+            {...getSkillsGridMotionProps(shouldReduceMotion)}
+          >
+            {activeSkills.map((skill, index) => (
+              <motion.div
+                key={skill.name}
+                className="relative flex flex-col items-center"
+                {...getSkillItemMotionProps(shouldReduceMotion, index)}
+              >
+                {skill.isFavourite && (
+                  <div className="absolute -top-10 sm:-top-12 z-10">
+                    <SpeechBubble
+                      text="fav!"
+                      className="px-0! py-0! scale-[0.65] sm:scale-75 origin-bottom"
+                    />
+                  </div>
+                )}
+                <SkillBadge name={skill.name} imageSrc={skill.img_url} />
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );
