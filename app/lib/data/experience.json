@@ -19,11 +19,12 @@
       "location": "toronto, ON",
       "description": "Working in global asset mgmt (GAM) to help maintain applications and build new ones to streamline internal services.",
       "bullets": [
-        "Upgraded legacy Java services to Spring Boot 4 and Java 25 using AWS SDK v2, improving compatibility with modern cloud integrations.",
-        "Increased unit test coverage by 70+% on legacy microservices to over 80%, reducing pipeline scan failures by 30%.",
-        "Designed and implemented GitHub Actions CI/CD workflows to automate build, test, and deployment pipelines; integrated sonarqube, Synk and DAST scans.",
-        "Utilized OpenShift (OCP) logs and platform tooling to debug and troubleshoot distributed service issues in containerized environments.",
-        "Developed Kafka producers and consumers for event-driven services, including designing and evolving Avro schemas and Kafka security with TLS and Kerberos."
+        "Configured secure authentication on Kafka-based microservices using Kerberos (GSSAPI, keytabs, KDC), JAAS/SASL, and TLS one-way SSL, ensuring compliance with enterprise security standards.",
+        "Designed and maintained 2+ Avro schemas in Schema Registry and implemented encryption/decryption logic using an internal SDK for secure message serialization and deserialization, ensuring data integrity for PII data.",
+        "Implemented a Kafka producer batch job to process and publish up to 10000+ rows of SQL-based data in bulk using a transactional approach, with built-in auditing for data integrity and traceability.",
+        "Upgraded 2+ microservices to Java 25 and AWS SDK v2, reducing security vulnerabilities by 50% to improve performance and compatibility with modern libraries.",
+        "Set up CI/CD workflows using GitHub Actions to automate build and deployment workflows for DEV, QA and UAT environments.",
+        "Configured OpenShift (OCP) environments and deployed templates involving Vault secret decryption and file injection during runtime, improving deployment consistency and reducing manual setup."
       ],
       "img": "/expImages/rbcelbem.png",
       "date": "winter 2026"
