@@ -152,9 +152,9 @@ export default function DetailPopup(props: DetailPopupProps) {
               </p>
             )}
 
-            {/* Date — underlined per Figma */}
+            {/* Date*/}
             {date && (
-              <p className="text-[1.0625rem] max-sm:text-[0.9rem] text-black underline mt-1.5 m-0">
+              <p className="text-[1.0625rem] max-sm:text-[0.9rem] text-(--dull-grey) mt-1.5 m-0">
                 {date}
               </p>
             )}
