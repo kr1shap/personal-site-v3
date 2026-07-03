@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { DesignItem } from "@/app/lib/types/design";
 import DesignCard from "@/app/design/components/DesignCard/DesignCard";
-import DesignModal from "@/app/design/components/DesignModal/DesignModal"
+import DesignModal from "@/app/design/components/DesignModal/DesignModal";
 import { getDesignData } from "@/app/lib/portfolioData";
 
 export default function DesignPage() {
