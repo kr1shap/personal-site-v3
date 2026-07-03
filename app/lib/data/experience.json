@@ -30,12 +30,21 @@
       "date": "winter 2026"
     },
     {
-      "role": "(SWE) Mobile Engineer",
+      "role": "Mobile Engineer Intern",
       "company": "Capital One",
       "location": "toronto, ON",
-      "description": "incoming summer 2026, working on the C1 Travel mobile app!",
+      "description": "Working on the Capital One Travel App to make travelling easier !",
       "bullets": [],
       "img": "/expImages/c1elbem.png",
+      "date": "summer 2026"
+    },
+    {
+      "role": "Tech & Data Intern",
+      "company": "CPPIB",
+      "location": "toronto, ON",
+      "description": "incoming @ fall 2026",
+      "bullets": [],
+      "img": "/expImages/cppelbem.png",
       "date": "summer 2026"
     }
   ]

@@ -85,6 +85,14 @@ export default function SkillsSection({ skillSet }: SkillsSectionProps) {
                     />
                   </div>
                 )}
+                {skill.note && (
+                  <div className="absolute -top-10 sm:-top-12 z-10">
+                    <SpeechBubble
+                      text={skill.note}
+                      className="px-0! py-0! scale-[0.65] sm:scale-75 origin-bottom"
+                    />
+                  </div>
+                )}
                 <SkillBadge name={skill.name} imageSrc={skill.img_url} />
               </motion.div>
             ))}

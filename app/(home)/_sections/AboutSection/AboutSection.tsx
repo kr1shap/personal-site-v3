@@ -24,18 +24,18 @@ export default function AboutSection() {
 
           <div className="mt-3 space-y-4 text-[clamp(1rem,5vw,2rem)] leading-snug text-black lg:mt-4 lg:space-y-5">
             <p>
-              I&apos;m a second (mayyybe third) year student at UofT, specializing in
+              I&apos;m a third year student at UofT, specializing in
               CS as well as minoring in stats + linguistics.
             </p>
 
             <p>
-              I do a few things; being a part of many cool clubs and a current
+              I do a few things; being a part of many cool clubs and a past
               undergraduate TA for MATA22 @ UTSC!
             </p>
 
             <p>
-              Currently interning @ rbc as a <u>software dev</u> and incoming @
-              capital one as a <u>mobile engineer</u>!
+              Currently interning @ capital one as a <u>mobile engineer</u> and incoming @
+              cpp investments as a part of their <u>tech & data program</u>!
             </p>
           </div>
         </div>

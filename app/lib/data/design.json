@@ -1,0 +1,41 @@
+{
+"design": [
+  {
+    "id": 1,
+    "title": "GenAI Genesis Banner Design",
+    "subtitle": "2026 biggest ai hackathon !",
+    "tool": "figma",
+    "imageUrl": "/designImages/genai_genesis_banner.png",
+    "previewColor": "#cddaf4",
+    "orientation": "portrait",
+    "year": "2024",
+    "details": "based on our 2026 hackathon theme, ai in the city, i designed one of banners to use at the hackathon. a lot of pictures were taken with it which made me very happy to see :)",
+    "tags": ["banner", "event", "hackathon"]
+  },
+  {
+    "id": 2,
+    "title": "workshop graphics - utmist",
+    "subtitle": "instagram templates",
+    "tool": "canva",
+    "imageUrl": "/designImages/utmist_workshop.png",
+    "previewColor": "#dde8f9",
+    "orientation": "portrait",
+    "year": "2025",
+    "details": "as a graphic design associate for utmist, i designed a lot of our key instagram posts to promote our events. this was one of the templates which i designed and was one of my best ones!",
+    "tags": ["social media"],
+    "link": "https://canva.link/e199vsjsl0woc7v"
+  },
+  {
+    "id": 3,
+    "title": "conference graphics - gdg utsc",
+    "subtitle": "instagram templates",
+    "tool": "canva",
+    "imageUrl": "/designImages/bwai_carousel.png",
+    "previewColor": "#dde8f9",
+    "orientation": "square",
+    "year": "2025",
+    "details": "as a part of marketing for gdg utsc, i designed a lot of our key instagram posts and design templates for our 'build with ai' event. this was one of our carousel posters we posted!",
+    "tags": ["social media"],
+    "link": "https://canva.link/zalam73ke6jrs48"
+  }
+]}
