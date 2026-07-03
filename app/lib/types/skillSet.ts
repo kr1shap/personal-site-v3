@@ -10,6 +10,6 @@ export interface SkillSet {
   FrameworksTools: Skill[];
   Databases: Skill[];
   Build_Deployment: Skill[];
-  Security_Monitoring: Skill[]
+  Security_Monitoring: Skill[];
   Tools_Other: Skill[];
 }
