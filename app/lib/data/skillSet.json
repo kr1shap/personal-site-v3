@@ -40,7 +40,7 @@
   ],
   "Build_Deployment": [
     { "name": "Git", "img_url": "/skillImages/git.svg" },
-    { "name": "Github Actions", "img_url": "/skillImages/githubactions.svg" },
+    { "name": "GitHub Actions", "img_url": "/skillImages/githubactions.svg" },
     { "name": "Bazel", "img_url": "/skillImages/bazel.svg" },
     { "name": "Docker", "img_url": "/skillImages/docker.svg" },
     { "name": "Kubernetes", "img_url": "/skillImages/kubernetes.svg" },
