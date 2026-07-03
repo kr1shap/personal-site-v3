@@ -16,6 +16,7 @@ export default function ExperienceSection({ entries }: ExperienceSectionProps) {
   if (entries.length === 0) return null;
 
   const visibleEntries = entries.slice(0, 4).reverse();
+  const visibleEntriesReverse = entries; 
 
   return (
     <section
@@ -61,7 +62,7 @@ export default function ExperienceSection({ entries }: ExperienceSectionProps) {
           <div className="relative">
             <div className="overflow-x-auto pt-2 pb-5 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
               <div className="flex w-max items-start gap-4 sm:gap-5 lg:gap-6 pl-0.5 pr-5">
-                {visibleEntries.reverse().map((experience) => (
+                {visibleEntriesReverse.map((experience) => (
                   <ExperienceCard
                     key={`${experience.company}-${experience.date}`}
                     experience={experience}
