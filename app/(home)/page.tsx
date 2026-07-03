@@ -6,7 +6,6 @@ import MusicSection from "./_sections/MusicSection/MusicSection";
 import ProjectsSection from "./_sections/ProjectsSection/ProjectsSection";
 import SkillsSection from "./_sections/SkillsSections/SkillsSection";
 import ContactSection from "./_sections/ContactSection/ContactSection";
-import Footer from "@/app/components/StickyComponents/Footer";
 import {
   getExperienceData,
   getProjectsData,
@@ -32,7 +31,6 @@ export default function Home() {
         <SkillsSection skillSet={skillSetData} />
         <ContactSection />
       </div>
-      <Footer />
     </main>
   );
 }

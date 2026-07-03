@@ -3,9 +3,10 @@ import type { SkillSet } from "@/app/lib/types/skillSet";
 export const CATEGORY_LABELS: Record<keyof SkillSet, string> = {
   ProgrammingLanguages: "languages",
   FrameworksTools: "frameworks/libs",
-  Databases: "databases",
-  DevOps_Cloud: "devops",
-  Tools_Other: "tools",
+  Databases: "databases/storage",
+  Build_Deployment: "devops",
+  Tools_Other: "other",
+  Security_Monitoring: "monitoring"
 };
 
 export const CATEGORY_KEYS = Object.keys(CATEGORY_LABELS) as (keyof SkillSet)[];

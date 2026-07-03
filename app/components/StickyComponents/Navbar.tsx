@@ -11,14 +11,16 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_LINKS = [
-  { label: "about", href: "#about", top: "14%", left: "10%" },
-  { label: "skills", href: "#skills", top: "22%", right: "12%" },
-  { label: "projects", href: "#projects", top: "30%", left: "40%" },
-  { label: "experience", href: "#experience", top: "38%", left: "6%" },
-  { label: "contact", href: "#contact", top: "46%", right: "14%" },
+  { label: "about", href: "/#about", top: "14%", left: "10%" },
+  { label: "skills", href: "/#skills", top: "22%", right: "12%" },
+  { label: "projects", href: "/#projects", top: "30%", left: "40%" },
+  { label: "experience", href: "/#experience", top: "38%", left: "6%" },
+  { label: "contact", href: "/#contact", top: "46%", right: "14%" },
+  { label: "design", href: "/design", top: "54%", left: "24%" }, // sep. page
 ];
 
 export default function NavBar() {
@@ -44,8 +46,8 @@ export default function NavBar() {
         }
       >
         {/* Logo */}
-        <a
-          href="#home"
+        <Link
+          href="/#home"
           className="flex items-center gap-2.5 sm:gap-3 select-none"
         >
           <div className="relative w-11 h-11 sm:w-12.5 sm:h-12.5 rounded-full overflow-hidden shrink-0">
@@ -60,19 +62,29 @@ export default function NavBar() {
           <span className="text-[1.75rem] sm:text-[2rem] leading-none text-(--dull-blue)">
             kp
           </span>
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <ul className="hidden lg:flex items-center gap-8 xl:gap-12">
           {NAV_LINKS.map((link) => (
             <li key={link.label}>
-              <a
-                href={link.href}
-                className="text-[1.65rem] xl:text-[2rem] text-(--dull-blue) hover:text-(--dark-blue) transition-colors duration-200"
-                style={{ textShadow: "0 2px 8px rgba(69,99,149,0.15)" }}
-              >
-                {link.label}
-              </a>
+              {link.href.startsWith("/") ? (
+                <Link
+                  href={link.href}
+                  className="text-[1.65rem] xl:text-[2rem] text-(--dull-blue) hover:text-(--dark-blue) transition-colors duration-200"
+                  style={{ textShadow: "0 2px 8px rgba(69,99,149,0.15)" }}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  href={link.href}
+                  className="text-[1.65rem] xl:text-[2rem] text-(--dull-blue) hover:text-(--dark-blue) transition-colors duration-200"
+                  style={{ textShadow: "0 2px 8px rgba(69,99,149,0.15)" }}
+                >
+                  {link.label}
+                </a>
+              )}
             </li>
           ))}
         </ul>
@@ -121,11 +133,8 @@ export default function NavBar() {
 
             {NAV_LINKS.map((link, i) => {
               const { label, href, top, ...pos } = link;
-              return (
-                <motion.a
-                  key={label}
-                  href={href}
-                  onClick={() => setMobileOpen(false)}
+              const linkContent = (
+                <motion.span
                   className="fixed z-50 lg:hidden text-[2.25rem] text-(--cream)"
                   style={{
                     top,
@@ -152,7 +161,20 @@ export default function NavBar() {
                   whileTap={{ scale: 0.97 }}
                 >
                   {label}
-                </motion.a>
+                </motion.span>
+              );
+              return (
+                <motion.div key={label} onClick={() => setMobileOpen(false)}>
+                  {href.startsWith("/") ? (
+                    <Link href={href} onClick={() => setMobileOpen(false)}>
+                      {linkContent}
+                    </Link>
+                  ) : (
+                    <a href={href} onClick={() => setMobileOpen(false)}>
+                      {linkContent}
+                    </a>
+                  )}
+                </motion.div>
               );
             })}
           </>

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import CustomCursor from "@/app/components/Decoration/CustomCursor";
 import Navbar from "@/app/components/StickyComponents/Navbar";
+import Footer from "@/app/components/StickyComponents/Footer";
 import InitialLoadGate from "@/app/components/InitialLoadGate/InitialLoadGate";
 import "./globals.css";
 
@@ -39,6 +40,7 @@ export default function RootLayout({
         <CustomCursor />
         <Navbar />
         <InitialLoadGate>{children}</InitialLoadGate>
+        <Footer />
         <Analytics />
       </body>
     </html>

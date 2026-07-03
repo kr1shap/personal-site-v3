@@ -9,9 +9,8 @@
  *   <DetailPopup isOpen={open} onClose={() => setOpen(false)} type="experience" data={exp} />
  *
  */
-
+/* eslint-disable */
 "use client";
-
 import { useEffect } from "react";
 import type { ExperienceEntry } from "../../lib/types/experience";
 import type { ProjectEntry } from "../../lib/types/projects";

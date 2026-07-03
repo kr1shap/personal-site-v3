@@ -15,7 +15,8 @@ export default function ExperienceSection({ entries }: ExperienceSectionProps) {
 
   if (entries.length === 0) return null;
 
-  const visibleEntries = entries.slice(0, 3);
+  const visibleEntries = entries.slice(0, 4).reverse();
+  const visibleEntriesReverse = entries; 
 
   return (
     <section
@@ -27,81 +28,57 @@ export default function ExperienceSection({ entries }: ExperienceSectionProps) {
           experience
         </h2>
         {/* Mobile — stacked cards with arrow images between them */}
-        <div className="flex flex-col items-center md:hidden">
-          <ExperienceCard
-            experience={visibleEntries[2]}
-            onClick={() => setSelected(visibleEntries[2])}
-          />
+        <div className="flex flex-col items-center gap-1 md:hidden">
+          {visibleEntries.map((experience, index) => (
+            <div
+              key={`${experience.company}-${experience.date}`}
+              className="flex flex-col items-center w-full"
+            >
+              <ExperienceCard
+                experience={experience}
+                onClick={() => setSelected(experience)}
+              />
 
-          <Image
-            src="/arrow.svg"
-            alt=""
-            aria-hidden="true"
-            width={98}
-            height={259}
-            className="h-36 w-auto self-start ml-8 -my-4"
-          />
-
-          <ExperienceCard
-            experience={visibleEntries[1]}
-            onClick={() => setSelected(visibleEntries[1])}
-          />
-
-          <Image
-            src="/arrow.svg"
-            alt=""
-            aria-hidden="true"
-            width={98}
-            height={259}
-            className="h-36 w-auto self-end mr-8 -my-4 -scale-x-100"
-          />
-
-          <ExperienceCard
-            experience={visibleEntries[0]}
-            onClick={() => setSelected(visibleEntries[0])}
-          />
+              {index < visibleEntries.length - 1 && (
+                <Image
+                  src="/arrow.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width={98}
+                  height={259}
+                  className={`h-32 w-auto -my-2 ${
+                    index % 2 === 0
+                      ? "self-start ml-8"
+                      : "self-end mr-8 -scale-x-100"
+                  }`}
+                />
+              )}
+            </div>
+          ))}
         </div>
 
-        {/* Desktop — cards above vector overlays */}
-        <div className="relative hidden md:block">
-          <div className="relative mx-auto h-156 w-full max-w-280">
-            <div className="absolute left-0 top-0 z-10">
-              <ExperienceCard
-                experience={visibleEntries[0]}
-                onClick={() => setSelected(visibleEntries[0])}
-              />
+        {/* Desktop — horizontal carousel with fade edges */}
+        <div className="hidden md:block">
+          <div className="relative">
+            <div className="overflow-x-auto pt-2 pb-5 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+              <div className="flex w-max items-start gap-4 sm:gap-5 lg:gap-6 pl-0.5 pr-5">
+                {visibleEntriesReverse.map((experience) => (
+                  <ExperienceCard
+                    key={`${experience.company}-${experience.date}`}
+                    experience={experience}
+                    onClick={() => setSelected(experience)}
+                  />
+                ))}
+              </div>
             </div>
 
-            <div className="absolute left-1/2 top-52 z-10 -translate-x-1/2">
-              <ExperienceCard
-                experience={visibleEntries[1]}
-                onClick={() => setSelected(visibleEntries[1])}
-              />
-            </div>
-
-            <div className="absolute right-0 top-4 z-10">
-              <ExperienceCard
-                experience={visibleEntries[2]}
-                onClick={() => setSelected(visibleEntries[2])}
-              />
-            </div>
-
-            <Image
-              src="/arrowFlipped.svg"
-              alt=""
+            <div
               aria-hidden="true"
-              width={242}
-              height={138}
-              className="pointer-events-none absolute left-[15%] top-96 z-0 w-28 rotate-60 select-none lg:w-36"
+              className="pointer-events-none absolute inset-y-0 left-0 w-8 sm:w-10 bg-linear-to-r from-(--cream) to-transparent"
             />
-
-            <Image
-              src="/arrowFlipped.svg"
-              alt=""
+            <div
               aria-hidden="true"
-              width={242}
-              height={138}
-              className="pointer-events-none absolute right-[15%] top-96 z-0 w-28 -rotate-6 select-none lg:w-36"
+              className="pointer-events-none absolute inset-y-0 right-0 w-8 sm:w-10 bg-linear-to-l from-(--cream) to-transparent"
             />
           </div>
         </div>

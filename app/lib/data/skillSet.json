@@ -35,27 +35,26 @@
     { "name": "SQLite", "img_url": "/skillImages/sqlite.svg" },
     { "name": "SQLAlchemy", "img_url": "/skillImages/sqlalchemy.svg" },
     { "name": "Firebase", "img_url": "/skillImages/firebase.svg" },
-    { "name": "Supabase", "img_url": "/skillImages/supabase.svg" }
+    { "name": "Supabase", "img_url": "/skillImages/supabase.svg" },
+    { "name": "AWS S3 SDK", "img_url": "/skillImages/awsc.png" }
   ],
-  "DevOps_Cloud": [
-    { "name": "AWS S3 SDK", "img_url": "/skillImages/awsc.png" },
+  "Build_Deployment": [
     { "name": "Git", "img_url": "/skillImages/git.svg" },
-    { "name": "OCP", "img_url": "/skillImages/redhatopenshift.svg" },
+    { "name": "GitHub Actions", "img_url": "/skillImages/githubactions.svg" },
+    { "name": "Bazel", "img_url": "/skillImages/bazel.svg" },
     { "name": "Docker", "img_url": "/skillImages/docker.svg" },
-    { "name": "Kubernetes", "img_url": "/skillImages/kubernetes.svg" }
+    { "name": "Kubernetes", "img_url": "/skillImages/kubernetes.svg" },
+    { "name": "OCP", "img_url": "/skillImages/redhatopenshift.svg" }
+  ],
+  "Security_Monitoring": [
+    { "name": "SonarQube", "img_url": "/skillImages/sonarqubeforide.svg" },
+    { "name": "Aqua", "img_url": "/skillImages/aqua.svg" },
+    { "name": "Snyk", "img_url": "/skillImages/snyk.svg" },
+    { "name": "New Relic", "img_url": "/skillImages/newrelic.svg" },
+    { "name": "Charles Proxy", "img_url": "/skillImages/charlesproxy.svg", "note": "can't change colour heh" }
   ],
   "Tools_Other": [
-    {
-      "name": "Figma",
-      "img_url": "/skillImages/figma.svg",
-      "isFavourite": true
-    },
-    { "name": "Rive", "img_url": "/skillImages/rive.svg" },
-    {
-      "name": "SonarQube",
-      "img_url": "/skillImages/sonarqubeforide.svg"
-    },
-    { "name": "Aqua", "img_url": "/skillImages/aqua.svg" },
-    { "name": "Snyk", "img_url": "/skillImages/snyk.svg" }
+    { "name": "Figma", "img_url": "/skillImages/figma.svg", "isFavourite": true },
+    { "name": "Rive", "img_url": "/skillImages/rive.svg" }
   ]
 }
