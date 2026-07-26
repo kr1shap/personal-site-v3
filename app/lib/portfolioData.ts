@@ -3,12 +3,14 @@ import type { ProjectsData } from "@/app/lib/types/projects";
 import type { SkillSet } from "@/app/lib/types/skillSet";
 import type { VolunteerData } from "@/app/lib/types/volunteer";
 import type { DesignData } from "@/app/lib/types/design";
+import type { ThoughtsData } from "@/app/lib/types/thoughts";
 
 import experienceData from "./data/experience.json";
 import projectsData from "./data/projects.json";
 import skillSetData from "./data/skillSet.json";
 import volunteerData from "./data/volunteer.json";
 import designData from "./data/design.json";
+import thoughtsData from "./data/thoughts.json";
 
 export function getExperienceData(): ExperienceData {
   return experienceData as ExperienceData;
@@ -26,6 +28,10 @@ export function getVolunteerData(): VolunteerData {
   return volunteerData as VolunteerData;
 }
 
-export function getDesignData(): DesignData { 
-  return designData as DesignData; 
+export function getDesignData(): DesignData {
+  return designData as DesignData;
+}
+
+export function getThoughtsData(): ThoughtsData {
+  return thoughtsData as ThoughtsData;
 }

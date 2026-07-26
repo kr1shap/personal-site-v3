@@ -1,0 +1,142 @@
+
+.articleContainer {
+  width: min(64rem, 100%);
+  margin: 0 auto;
+  padding: 6rem 1.25rem 4rem;
+  animation: slideUp 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.headerNav {
+  margin-bottom: 2rem;
+}
+
+.backLink {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark-blue);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.4rem;
+  transition: color 200ms ease, transform 200ms ease;
+}
+
+.backLink:hover {
+  color: var(--bright-blue);
+  transform: translateX(-3px);
+}
+
+.backLink:focus-visible {
+  outline: 2px solid var(--bright-blue);
+  outline-offset: 4px;
+}
+
+.backArrow {
+  font-size: 1.15rem;
+  line-height: 1;
+  margin-right: 0.05rem;
+}
+
+/* Reading body — sits inside the wider container so the title can
+   span the full indenting. */
+.body {
+  color: #1a1a2e;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  margin-top: 1rem;
+}
+
+.paragraph {
+  margin: 0 0 1.35rem;
+}
+
+.heading {
+  font-size: clamp(1.7rem, 4vw, 2.1rem);
+  font-weight: 600;
+  color: var(--dark-blue);
+  margin: 2.4rem 0 0.7rem;
+  line-height: 1.1;
+}
+
+.figure {
+  margin: 1.75rem 0;
+}
+
+.bodyImage {
+  width: 100%;
+  border-radius: 0.5rem;
+  background: var(--paper-soft);
+  padding: 1rem;
+}
+
+.caption {
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--dull-blue);
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.quote {
+  border-left: 3px solid var(--dark-blue);
+  padding: 0.55rem 0 0.55rem 1.15rem;
+  margin: 1.6rem 0;
+  background: var(--paper-soft);
+  border-radius: 0 0.4rem 0.4rem 0;
+}
+
+.quoteText {
+  font-style: italic;
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.quoteSource {
+  font-style: normal;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  display: block;
+}
+
+.list {
+  padding-left: 1.4rem;
+  margin: 1rem 0 1.4rem;
+}
+
+.listItem {
+  margin-bottom: 0.5rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 640px) {
+  .articleContainer {
+    padding: 4rem 1.25rem 3.5rem;
+  }
+
+  .headerBlock {
+    margin-bottom: 2rem;
+  }
+
+  .body {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .heading {
+    margin-top: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .articleContainer {
+    animation: none;
+  }
+
+  .backLink {
+    transition: none;
+  }
+}

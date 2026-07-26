@@ -12,6 +12,7 @@ import {
   getSkillSetData,
   getVolunteerData,
 } from "@/app/lib/portfolioData";
+import ThoughtsBubble from "@/app/components/ThoughtsBubble/ThoughtsBubble";
 
 export default function Home() {
   const experienceData = getExperienceData();
@@ -31,6 +32,7 @@ export default function Home() {
         <SkillsSection skillSet={skillSetData} />
         <ContactSection />
       </div>
+      <ThoughtsBubble />
     </main>
   );
 }
