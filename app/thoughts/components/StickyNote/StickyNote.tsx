@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import type { RefObject } from "react";
 import type { StickyThought } from "@/app/lib/types/thoughts";
 
 interface Props {
@@ -36,15 +35,13 @@ export default function StickyNote({ thought }: Props) {
   return (
     <motion.div
       data-interactive=""
-      className={`absolute w-46 min-h-42 rounded-none px-4 pt-[1.4rem] pb-[0.95rem] text-[1.08rem] leading-tight text-[#1d1d22] shadow-[2px_4px_12px_var(--paper-shadow)] touch-none select-none outline-none origin-top-left will-change-transform cursor-grab ${colorClass} focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-(--ink-soft)`}
+      className={`absolute w-46 min-h-[10.5rem] rounded-none px-4 pt-[1.4rem] pb-[0.95rem] text-[1.08rem] leading-tight text-[#1d1d22] shadow-[2px_4px_12px_var(--paper-shadow)] touch-none select-none outline-none origin-top-left will-change-transform cursor-grab ${colorClass} focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-(--ink-soft)`}
       style={{
         left: `${position.x}%`,
         top: `${position.y}%`,
         zIndex: position.z ?? 1,
       }}
       drag
-      dragConstraints={"parent" as unknown as RefObject<HTMLElement | null>}
-      dragElastic={dragElastic}
       dragMomentum={false}
       whileHover={{ scale: hoverScale, rotate: rotation + 1 }}
       whileTap={{ scale: tapScale }}

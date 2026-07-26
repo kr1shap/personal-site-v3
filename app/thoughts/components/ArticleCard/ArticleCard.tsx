@@ -46,6 +46,7 @@ export default function ArticleCard({ thought }: Props) {
     : { type: "spring" as const, stiffness: 240, damping: 22 };
 
   const slug = slugifyArticleTitle(title);
+  const titleId = `article-title-${slug}`;
 
   return (
     <motion.div
@@ -70,13 +71,13 @@ export default function ArticleCard({ thought }: Props) {
       <Link
         href={`/thoughts/${slug}`}
         className="flex h-full flex-col cursor-pointer rounded-[1.625rem] text-inherit no-underline outline-none"
-        aria-label={`Open article: ${title}`}
+        aria-labelledby={titleId}
       >
         <div className="absolute left-1/2 top-[-0.6rem] z-1 grid h-[1.05rem] w-32 -translate-x-1/2 -rotate-3 place-items-center border-l border-r border-dashed border-black/7 bg-(--tape) text-(--ink) shadow-[0_1px_2px_rgba(0,0,0,0.14)]">
           <span className="rotate-3 text-[0.95rem] leading-none text-[#1f254599]" />
         </div>
         <header className="relative rounded-t-[1.625rem] bg-[#1c4b9a] px-4 pb-[0.6rem] pt-[0.7rem] text-white">
-          <h2 className="m-0 text-[1.95rem] leading-[1.05] font-semibold tracking-[0.005em]">
+          <h2 id={titleId} className="m-0 text-[1.95rem] leading-[1.05] font-semibold tracking-[0.005em]">
             {title}
           </h2>
           {date ? (
