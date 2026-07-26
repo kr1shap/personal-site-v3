@@ -1,0 +1,147 @@
+{
+  "thoughts": [
+    {
+      "id": 1,
+      "type": "sticky",
+      "color": "yellow",
+      "text": "ain't this cool?",
+      "position": { "x": 6, "y": 14, "rotation": -3, "z": 1 },
+      "date": "july 26"
+    },
+    {
+      "id": 4,
+      "type": "sticky",
+      "color": "blue",
+      "text": "hire me for 2027 summer please",
+      "imageUrl": "/thoughtsImages/tungsahur.webp",
+      "position": { "x": 43, "y": 34, "rotation": 4, "z": 1 }
+    },
+    {
+      "id": 9,
+      "type": "article",
+      "title": "my love-hate relationship with AI",
+      "preview": "i have a very love-hate relationship with AI. i love how it streamlines my workflows, but the field of software engineering has completely changed…",
+      "position": { "x": 72, "y": 58, "rotation": -2, "z": 3 },
+      "date": "july 26 2026",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "i have a very love-hate relationship with AI."
+        },
+        {
+          "type": "paragraph",
+          "text": "like, i love how it helps me streamline a lot of my workflows at work, like me trying to find the location of a single enum in like a bagillion Swift files. it makes coding the annoying things easier for me. and i'm not complaining about that."
+        },
+        {
+          "type": "paragraph",
+          "text": "but the field of software engineering a few years ago vs. now is completely different, and that's obvious why. no more StackOverflow threads or tutorial hell (unless you want to write it by hand and learn), but that's not productive at work anymore. they want things done and shipped fast, regardless of whether you're at a startup or not. and i'll be honest, i don't know how to feel about this."
+        },
+        {
+          "type": "paragraph",
+          "text": "when AI first started booming, and things like Claude started to become super popular, i was very against using AI. i didn't want to forget the things i learnt or how to code. given that now, that's the complete opposite, and i use AI a lot at work and at home to help me learn, do certain things, etc. especially with how fast AI, development with agents and these tools are improving, you have to catch up. it took me a while to admit that i should probably start leveraging these tools in my personal life and work."
+        },
+        {
+          "type": "paragraph",
+          "text": "did i forget how to code? no, not really. but there are small things that i would probably have to look up if i were to do it manually; i would easily overlook these things if i got Claude to just do it for me."
+        },
+        {
+          "type": "paragraph",
+          "text": "but i miss coding before; even though it was a hellhole at times, it feels nostalgic checking StackOverflow and copying solutions word for word (not much different than copying Claude's solution). i am the type to prefer the process of building a bit more than the final result. i can code by hand as a personal hobby; it's not productive at work. for me, though, it doesn't feel the same. especially with internships and such being so hard to get (and me always aiming for more), it's not something i can do so often. maybe when i graduate or have a lot more free time."
+        },
+        {
+          "type": "heading",
+          "text": "a few other nits"
+        },
+        {
+          "type": "paragraph",
+          "text": "there are also a few other nits and things from this new era of AI:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "so many new tech creators promoting amazing AI tools, but also a lot of AI slop",
+            "so many people claiming to know how to code (i see that purple gradient with a rounded radius on your website and i know you put zero thought into that 😂)",
+            "not related to programming, but so many small businesses resort to AI-generated art because it is cheap. i don't blame them, but i wish we could go back to designer art. i noticed this more whenever i visited Midland&Finch SkyCity",
+            "so many buzzwords to learn and understand"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "and for the second point (aka. vibecoders), i'm not hating on you guys. it is very interesting to see how people with zero technical knowledge can spin up a web app or other stuff using Replit, etc."
+        },
+        {
+          "type": "paragraph",
+          "text": "i feel like there are so many more thoughts i can spew into this article but for now, i will keep it to this."
+        },
+        {
+          "type": "paragraph",
+          "text": "TLDR: technology is always changing. whether it be for the good or bad in your viewpoint, you need to adapt and understand. growth is exponential."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "article",
+      "title": "why i enjoy mobile development",
+      "preview": "a lot of people ask me why i enjoy mobile development. to most people, it's just frontend, which feels robotic and not stimulating…",
+      "position": { "x": 26, "y": 64, "rotation": 3, "z": 3 },
+      "date": "july 26 2026",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "this will be short, but a lot of people ask me why i enjoy mobile development."
+        },
+        {
+          "type": "paragraph",
+          "text": "to most people, it's just frontend, which feels robotic and not stimulating. it is definitely a lot of frontend, but there are a lot more things than that."
+        },
+        {
+          "type": "heading",
+          "text": "more than frontend"
+        },
+        {
+          "type": "paragraph",
+          "text": "there are a lot more things than that:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "ensuring the app works across many screen sizes and displays, orientations",
+            "increase optimization; no CPU churn, random hangs in memory (Xcode Instruments is a clutch item)",
+            "you have a keen eye for animations and UI. custom animations, custom bottom sheets, screens, etc.",
+            "different types of testing involving E2E UI testing and Screenshot testing (though Screenshot testing is 100% boring)"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "and no, i am not talking about React Native mobile development. i REFUSE to touch a single ounce of JavaScript and TypeScript for that; too verbose."
+        },
+        {
+          "type": "paragraph",
+          "text": "now, i prefer iOS development, specifically in native Swift, SwiftUI, and UIKit (though SwiftUI for the win)."
+        },
+        {
+          "type": "heading",
+          "text": "why iOS"
+        },
+        {
+          "type": "list",
+          "items": [
+            "i like how SwiftUI is laid out and is easy to read and understand. it has a lot of capabilities that UIKit has. the only downside is that UIKit performs better and has a lot more customization. you can always mix and match, though.",
+            "Apple's branding is one of my favourites. it's so iconic, simple, smooth, and i can't think of anything much better than that.",
+            "the community is really supportive and nice.",
+            "i can still be creative."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "at Capital One, i do iOS development, and i definitely enjoy the environment and the engineers around me. we share commonalities that i don't have with many other people (as iOS development is a bit niche?)."
+        },
+        {
+          "type": "paragraph",
+          "text": "now, mobile development is not the only thing i can do (don't go away, recruiter). i still know my fair share of distributed systems, event messaging (Kafka), etc."
+        }
+      ]
+    }
+  ]
+}

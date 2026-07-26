@@ -20,6 +20,20 @@
   --black: #000000;
   --white: #ffffff;
   --nav-bg: #0e1b2e;
+
+  /* ---- thoughts dashboard tokens ---- */
+  --paper: #fbf7ee;
+  --paper-soft: #f4ecd9;
+  --paper-shadow: rgba(60, 45, 15, 0.18);
+  --ink: #1f2545;
+  --ink-soft: #4a4f73;
+  --tape: rgba(255, 255, 255, 0.55);
+  --sticky-yellow: #f3e19b;
+  --sticky-yellow-edge: #dcc367;
+  --sticky-mint: #aff3bb;
+  --sticky-mint-edge: #7cb98b;
+  --sticky-blue: #8eaeef;
+  --sticky-blue-edge: #6c91dc;
 }
 
 @media (prefers-color-scheme: dark) {
