@@ -75,10 +75,10 @@ export default async function ArticlePage({ params }: PageParams) {
       </div>
 
       <div className="mb-12">
-        <h1 className="text-[100px] leading-none text-[#456395]">
+        <h1 className="text-[clamp(2.5rem,8.5vw,6.25rem)] leading-[1.05] text-[#456395] break-words hyphens-none">
           {article.title}
         </h1>
-        <p className="text-[28px] mt-1 text-[#757272]">
+        <p className="text-[clamp(1.1rem,3.2vw,1.75rem)] mt-1 text-[#757272]">
           a thought{article.date ? ` · ${article.date}` : ""}
         </p>
       </div>
