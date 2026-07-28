@@ -25,6 +25,9 @@ import styles from "./BoardCanvas.module.css";
  *   - **Floating controls** (+/−/100%/reset) bottom-right for users who'd
  *     rather click than scroll.
  *
+ * The board viewport (gradients, dynamic CSS-var dimensions) stays in a
+ * CSS module because Tailwind arbitrary values are awkward there; the
+ * float controls + zoom buttons are pure Tailwind below.
  */
 
 const MIN_ZOOM = 0.25;
@@ -333,39 +336,75 @@ export default function BoardCanvas({ thoughts }: { thoughts: Thought[] }) {
 
       <div
         data-interactive=""
-        className={styles.controls}
         aria-label="Zoom controls"
+        className="absolute bottom-5 right-4 z-50 flex items-center gap-[0.15rem]
+                   bg-[rgba(251,247,238,0.92)] backdrop-blur-[8px]
+                   border-[1.5px] border-[var(--dull-blue)] rounded-full
+                   py-[0.3rem] px-[0.4rem]
+                   shadow-[0_2px_10px_rgba(28,75,154,0.18)] select-none
+                   sm:bottom-9 sm:right-8 sm:px-[0.45rem]"
       >
         <button
           type="button"
-          className={styles.controlButton}
           onClick={handleZoomOut}
           aria-label="Zoom out"
           disabled={atMinZoom}
+          className="text-[var(--dark-blue)] bg-transparent border-0 rounded-full
+                     cursor-pointer leading-none
+                     transition-[background,color,transform] duration-150 ease-linear
+                     py-[0.6rem] px-[0.8rem] text-[1.1rem]
+                     hover:enabled:bg-[rgba(69,99,149,0.14)]
+                     hover:enabled:text-[var(--bright-blue)]
+                     active:enabled:scale-[0.92]
+                     disabled:opacity-35 disabled:cursor-not-allowed
+                     focus-visible:outline-2 focus-visible:outline-[var(--bright-blue)]
+                     focus-visible:outline-offset-[3px]
+                     sm:py-[0.4rem] sm:px-[0.7rem] sm:text-[1.15rem]"
         >
           −
         </button>
         <span
-          className={styles.zoomLabel}
           aria-live="polite"
           aria-atomic="true"
+          className="text-[var(--dull-blue)] text-center tracking-[0.02em] tabular-nums
+                     px-[0.4rem] min-w-[3.2rem] text-[0.95rem]
+                     sm:px-[0.45rem] sm:min-w-[3.4rem] sm:text-[0.98rem]"
         >
           {Math.round(zoom * 100)}%
         </span>
         <button
           type="button"
-          className={styles.controlButton}
           onClick={handleZoomIn}
           aria-label="Zoom in"
           disabled={atMaxZoom}
+          className="text-[var(--dark-blue)] bg-transparent border-0 rounded-full
+                     cursor-pointer leading-none
+                     transition-[background,color,transform] duration-150 ease-linear
+                     py-[0.6rem] px-[0.8rem] text-[1.1rem]
+                     hover:enabled:bg-[rgba(69,99,149,0.14)]
+                     hover:enabled:text-[var(--bright-blue)]
+                     active:enabled:scale-[0.92]
+                     disabled:opacity-35 disabled:cursor-not-allowed
+                     focus-visible:outline-2 focus-visible:outline-[var(--bright-blue)]
+                     focus-visible:outline-offset-[3px]
+                     sm:py-[0.4rem] sm:px-[0.7rem] sm:text-[1.15rem]"
         >
           +
         </button>
         <button
           type="button"
-          className={`${styles.controlButton} ${styles.controlReset}`}
           onClick={handleReset}
           aria-label="Reset zoom and pan"
+          className="text-[var(--dark-blue)] bg-transparent border-0 cursor-pointer
+                     leading-none transition-[background,color,transform] duration-150 ease-linear
+                     border-l border-l-solid border-[rgba(69,99,149,0.3)] rounded-none tracking-[0.02em]
+                     py-[0.7rem] px-[1rem] text-[0.95rem]
+                     hover:enabled:bg-[rgba(69,99,149,0.14)]
+                     hover:enabled:text-[var(--bright-blue)]
+                     active:enabled:scale-[0.92]
+                     focus-visible:outline-2 focus-visible:outline-[var(--bright-blue)]
+                     focus-visible:outline-offset-[3px]
+                     sm:py-[0.4rem] sm:px-[0.85rem] sm:text-[0.88rem]"
         >
           reset
         </button>
