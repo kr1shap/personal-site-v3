@@ -1,5 +1,10 @@
+import Link from "next/link";
 import BoardCanvas from "./components/BoardCanvas/BoardCanvas";
 import { getThoughtsData } from "@/app/lib/portfolioData";
+import {
+  slugifyArticleTitle,
+  type ArticleThought,
+} from "@/app/lib/types/thoughts";
 
 /** Tailwind classnames that don't change between breakpoints. */
 const hintBase =
@@ -21,6 +26,9 @@ const hintDotBase =
 
 export default function ThoughtsPage() {
   const { thoughts } = getThoughtsData();
+  const articles = thoughts.filter(
+    (thought): thought is ArticleThought => thought.type === "article"
+  );
 
   // Mobile-first hint pill:
   //   - mobile (<640px)  → row wraps inside a 75vw × 75vh cap, larger
@@ -73,6 +81,55 @@ export default function ThoughtsPage() {
           <span>play with it!</span>
         </p>
       </div>
+
+      <section
+        aria-labelledby="article-quick-links"
+        className="mx-auto mt-8 max-w-5xl px-1 sm:mt-10"
+      >
+        <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="m-0 text-[1.05rem] font-semibold lowercase tracking-[0.08em] text-[#456395]">
+              article quick links
+            </p>
+            <h2
+              id="article-quick-links"
+              className="m-0 text-[clamp(2.2rem,5vw,4.25rem)] leading-none text-[#1c4b9a]"
+            >
+              read without the board
+            </h2>
+          </div>
+          <p className="m-0 max-w-md text-[1.2rem] leading-snug text-[#757272]">
+            same thoughts, less dragging :)
+          </p>
+        </div>
+
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {articles.map((article) => {
+            const slug = slugifyArticleTitle(article.title);
+
+            return (
+              <Link
+                key={article.id}
+                href={`/thoughts/${slug}`}
+                className="group flex min-h-[10.5rem] flex-col rounded-[0.5rem] border-2 border-[#456395]/35 bg-[#fbf7ee] px-5 py-4 text-[#1f2545] no-underline shadow-[3px_4px_10.4px_0px_rgba(69,99,149,0.18)] transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-[#456395] hover:shadow-[3px_7px_18px_0px_rgba(69,99,149,0.24)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#145bd2]"
+              >
+                <span className="mb-2 text-[0.9rem] font-semibold lowercase tracking-[0.06em] text-[#456395]/75">
+                  {article.date ?? "undated"}
+                </span>
+                <h3 className="m-0 text-[2rem] leading-[1.02] text-[#1c4b9a]">
+                  {article.title}
+                </h3>
+                <p className="mb-4 mt-3 line-clamp-3 text-[1.05rem] leading-snug text-[#4a4f73]">
+                  {article.preview}
+                </p>
+                <span className="mt-auto text-[1rem] font-semibold text-[#456395] transition-colors group-hover:text-[#145bd2]">
+                  open thought →
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
     </div>
   );
 }

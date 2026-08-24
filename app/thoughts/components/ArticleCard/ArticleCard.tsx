@@ -18,21 +18,6 @@ interface Props {
  * whileTap / spring work. Next's `<Link>` is wrapped *inside* it, not
  * the other way around (i.e. we deliberately do NOT use
  * `motion.create(Link)`). Reasons:
- *
- *   1. In framer-motion v12, `motion.create(<non-framer-component>)`
- *      routes the wrapped component's pointer stream through framer's
- *      projection pipeline. With article cards this silently broke
- *      Next's `<Link>` click → `router.push` flow — the click event
- *      reaches the DOM but navigation never fires. Wrapping a plain
- *      `<Link>` inside a `<motion.div>` keeps the click on the
- *      plain-DOM anchor, while the parent motion.div handles the
- *      visual spring.
- *
- *   2. The "0×0 parent trap" that the previous MotionLink pattern was
- *      working around no longer applies: this wrapper puts the
- *      position:absolute / width:18.5rem / padding / border geometry
- *      on motion.div, and the Link inside is `display:block` so it
- *      fills motion.div and its onClick fires on the actual anchor.
  */
 export default function ArticleCard({ thought }: Props) {
   const { position, title, preview, date } = thought;
