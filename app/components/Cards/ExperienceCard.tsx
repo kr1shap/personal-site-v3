@@ -28,7 +28,7 @@ export default function ExperienceCard({
         w-[min(22.75rem,90vw)] min-h-[19.3rem] pb-5 px-3 sm:px-4
         flex flex-col items-center bg-(--cream)
         cursor-pointer transition-all duration-200 ease-out
-        hover:-translate-y-0.75 hover:shadow-(--popup-shadow-hover)
+        hover:-translate-y-0.75 hover:shadow-(--card-shadow-hover)
       "
       onClick={onClick}
       role="button"

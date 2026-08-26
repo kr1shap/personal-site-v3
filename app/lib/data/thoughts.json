@@ -142,6 +142,110 @@
           "text": "now, mobile development is not the only thing i can do (don't go away, recruiter). i still know my fair share of distributed systems, event messaging (Kafka), etc."
         }
       ]
+    },
+    {
+      "id": 11,
+      "type": "article",
+      "title": "my ways of design",
+      "preview": "even though i come from a computer science major, i initially really enjoyed design and wanted to pursue something in it. so i brought it into my degree instead...",
+      "position": { "x": 52, "y": 100, "rotation": -4, "z": 3 },
+      "date": "august 24 2026",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "even though i come from a computer science major, i initially really enjoyed design and wanted to pursue something in it."
+        },
+        {
+          "type": "paragraph",
+          "text": "so, i just brought it into my computer science degree instead. when making products or projects, i take pretty good pride in making the ui and design look cohesive and great."
+        },
+        {
+          "type": "paragraph",
+          "text": "one thing i've been working on recently is pace. i've had a lot of experience in financial companies and wanted both technical and ideation expertise in this."
+        },
+        {
+          "type": "paragraph",
+          "text": "what pace is meant to be is a mainly read-only app that gamifies keeping track of your spending. i plan to use plaid, a third-party api that connects to your bank account, to view spending on a checking or credit account."
+        },
+        {
+          "type": "paragraph",
+          "text": "yes yes, i know plaid isn't the best option here. but the point of this project was more to mimic a feature or something to add to an existing financial institution's application. most of these do not offer public apis for pretty obvious reasons."
+        },
+        {
+          "type": "paragraph",
+          "text": "if i do plan to publish it to the public, i would need to change a lot of the infrastructure around connecting to your account :)"
+        },
+        {
+          "type": "paragraph",
+          "text": "anyways, let's move onto how i thought of the design."
+        },
+        {
+          "type": "paragraph",
+          "text": "i've noticed a lot of apps with this gamification aspect have designs that are super minimal, playable, and fun. here are some i found for inspiration:"
+        },
+        {
+          "type": "image",
+          "src": "/thoughtsImages/pace-design/inspiration-reflections.jpg",
+          "alt": "mobile app screens with soft characters and playful wellness prompts",
+          "caption": "one of the references i looked at for soft, playful mobile ui"
+        },
+        {
+          "type": "image",
+          "src": "/thoughtsImages/pace-design/inspiration-moe.jpg",
+          "alt": "habit app screens with bold green shapes and character illustrations",
+          "caption": "another reference with bold colours, mascot shapes, and a gamified feeling"
+        },
+        {
+          "type": "paragraph",
+          "text": "honestly, i'm still trying to find a term to describe these (i think the term might be organic/blobby design for the mascots?), but a lot of core things i notice off the bat:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "simple fonts: think of Inter, DM Sans, etc. they're very pleasing to the eye, and don't scream Arial",
+            "use of shapes and blobs. their mascots and icons are abstract shapes, which are pretty adorable",
+            "contrasting colours that give a pop. there are no monotone colour palettes here, and they're not afraid to make some colour stand out"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "these are the main things i took out of this. i used my brain and spun up a few figma flows, and this is what i intend to build:"
+        },
+        {
+          "type": "image",
+          "src": "/thoughtsImages/pace-design/intro-auth-flow.png",
+          "alt": "pace onboarding and authentication flow with mascot characters",
+          "caption": "the intro and authentication flow for pace"
+        },
+        {
+          "type": "image",
+          "src": "/thoughtsImages/pace-design/high-fidelity-flow.png",
+          "alt": "full pace high fidelity onboarding, authentication, account connection, goal, quest, and home flow",
+          "caption": "the fuller high-fidelity flow, still very much a work in progress"
+        },
+        {
+          "type": "paragraph",
+          "text": "yes this is still a lot of work in progress and a bunch of stuff will probably end up changing because i got mad implementing it in swiftui, but this is the core idea."
+        },
+        {
+          "type": "paragraph",
+          "text": "i took a lot of inspiration from the bold colours and shapes, and made something pretty cute and fun."
+        },
+        {
+          "type": "paragraph",
+          "text": "i sketched out a lot of the wireframes and used chatgpt work (in a way, codex) to implement the figma flows."
+        },
+        {
+          "type": "image",
+          "src": "/thoughtsImages/pace-design/wireframe-sketch.jpeg",
+          "alt": "hand drawn pace onboarding wireframe sequence",
+          "caption": "the very serious and professional wireframe phase"
+        },
+        {
+          "type": "paragraph",
+          "text": "i hope i at least have the motivation to finish this. but the most fun part for me here was creating the designs."
+        }
+      ]
     }
   ]
 }

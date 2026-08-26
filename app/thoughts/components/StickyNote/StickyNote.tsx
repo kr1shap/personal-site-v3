@@ -24,7 +24,6 @@ export default function StickyNote({ thought }: Props) {
         ? "bg-linear-to-b from-(--sticky-mint) to-(--sticky-mint-edge)"
         : "bg-linear-to-b from-(--sticky-blue) to-(--sticky-blue-edge)";
   const prefersReducedMotion = useReducedMotion();
-  const dragElastic = prefersReducedMotion ? 0 : 0.15;
   const hoverScale = prefersReducedMotion ? 1 : 1.08;
   const tapScale = prefersReducedMotion ? 1 : 0.97;
   const dragScale = prefersReducedMotion ? 1 : 1.05;
@@ -35,7 +34,7 @@ export default function StickyNote({ thought }: Props) {
   return (
     <motion.div
       data-interactive=""
-      className={`absolute w-46 min-h-[10.5rem] rounded-none px-4 pt-[1.4rem] pb-[0.95rem] text-[1.08rem] leading-tight text-[#1d1d22] shadow-[2px_4px_12px_var(--paper-shadow)] touch-none select-none outline-none origin-top-left will-change-transform cursor-grab ${colorClass} focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-(--ink-soft)`}
+      className={`absolute w-46 min-h-42 rounded-none px-4 pt-[1.4rem] pb-[0.95rem] text-[1.08rem] leading-tight text-[#1d1d22] shadow-[2px_4px_12px_var(--paper-shadow)] touch-none select-none outline-none origin-top-left will-change-transform cursor-grab ${colorClass} focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-(--ink-soft)`}
       style={{
         left: `${position.x}%`,
         top: `${position.y}%`,
