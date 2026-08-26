@@ -1,11 +1,3 @@
-/* ---- Board viewport (where pan / wheel / pinch land) + canvas ----
-   The floating zoom controls (+/−/100%/reset) are styled with Tailwind
-   on BoardCanvas.tsx because they need breakpoint-aware sizing,
-   pseudo-class variants (hover/active/focus-visible/disabled), and CSS
-   custom properties. The viewport keeps the two-part radial gradient
-   background and a dynamic CSS-var board dimension that were awkward
-   to express as a Tailwind arbitrary value. */
-
 .viewport {
   position: relative;
   width: 100%;

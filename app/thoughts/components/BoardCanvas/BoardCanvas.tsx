@@ -339,7 +339,7 @@ export default function BoardCanvas({ thoughts }: { thoughts: Thought[] }) {
         aria-label="Zoom controls"
         className="absolute bottom-5 right-4 z-50 flex items-center gap-[0.15rem]
                    bg-[rgba(251,247,238,0.92)] backdrop-blur-[8px]
-                   border-[1.5px] border-[var(--dull-blue)] rounded-full
+                   border-[1.5px] border-(--dull-blue) rounded-full
                    py-[0.3rem] px-[0.4rem]
                    shadow-[0_2px_10px_rgba(28,75,154,0.18)] select-none
                    sm:bottom-9 sm:right-8 sm:px-[0.45rem]"
@@ -349,15 +349,15 @@ export default function BoardCanvas({ thoughts }: { thoughts: Thought[] }) {
           onClick={handleZoomOut}
           aria-label="Zoom out"
           disabled={atMinZoom}
-          className="text-[var(--dark-blue)] bg-transparent border-0 rounded-full
+          className="text-(--dark-blue) bg-transparent border-0 rounded-full
                      cursor-pointer leading-none
                      transition-[background,color,transform] duration-150 ease-linear
                      py-[0.6rem] px-[0.8rem] text-[1.1rem]
                      hover:enabled:bg-[rgba(69,99,149,0.14)]
-                     hover:enabled:text-[var(--bright-blue)]
+                     hover:enabled:text-(--bright-blue)
                      active:enabled:scale-[0.92]
                      disabled:opacity-35 disabled:cursor-not-allowed
-                     focus-visible:outline-2 focus-visible:outline-[var(--bright-blue)]
+                     focus-visible:outline-2 focus-visible:outline-(--bright-blue)
                      focus-visible:outline-offset-[3px]
                      sm:py-[0.4rem] sm:px-[0.7rem] sm:text-[1.15rem]"
         >
@@ -366,7 +366,7 @@ export default function BoardCanvas({ thoughts }: { thoughts: Thought[] }) {
         <span
           aria-live="polite"
           aria-atomic="true"
-          className="text-[var(--dull-blue)] text-center tracking-[0.02em] tabular-nums
+          className="text-(--dull-blue) text-center tracking-[0.02em] tabular-nums
                      px-[0.4rem] min-w-[3.2rem] text-[0.95rem]
                      sm:px-[0.45rem] sm:min-w-[3.4rem] sm:text-[0.98rem]"
         >
@@ -377,15 +377,15 @@ export default function BoardCanvas({ thoughts }: { thoughts: Thought[] }) {
           onClick={handleZoomIn}
           aria-label="Zoom in"
           disabled={atMaxZoom}
-          className="text-[var(--dark-blue)] bg-transparent border-0 rounded-full
+          className="text-(--dark-blue) bg-transparent border-0 rounded-full
                      cursor-pointer leading-none
                      transition-[background,color,transform] duration-150 ease-linear
                      py-[0.6rem] px-[0.8rem] text-[1.1rem]
                      hover:enabled:bg-[rgba(69,99,149,0.14)]
-                     hover:enabled:text-[var(--bright-blue)]
+                     hover:enabled:text-(--bright-blue)
                      active:enabled:scale-[0.92]
                      disabled:opacity-35 disabled:cursor-not-allowed
-                     focus-visible:outline-2 focus-visible:outline-[var(--bright-blue)]
+                     focus-visible:outline-2 focus-visible:outline-(--bright-blue)
                      focus-visible:outline-offset-[3px]
                      sm:py-[0.4rem] sm:px-[0.7rem] sm:text-[1.15rem]"
         >
@@ -395,14 +395,14 @@ export default function BoardCanvas({ thoughts }: { thoughts: Thought[] }) {
           type="button"
           onClick={handleReset}
           aria-label="Reset zoom and pan"
-          className="text-[var(--dark-blue)] bg-transparent border-0 cursor-pointer
+          className="text-(--dark-blue) bg-transparent border-0 cursor-pointer
                      leading-none transition-[background,color,transform] duration-150 ease-linear
                      border-l border-l-solid border-[rgba(69,99,149,0.3)] rounded-none tracking-[0.02em]
                      py-[0.7rem] px-[1rem] text-[0.95rem]
                      hover:enabled:bg-[rgba(69,99,149,0.14)]
-                     hover:enabled:text-[var(--bright-blue)]
+                     hover:enabled:text-(--bright-blue)
                      active:enabled:scale-[0.92]
-                     focus-visible:outline-2 focus-visible:outline-[var(--bright-blue)]
+                     focus-visible:outline-2 focus-visible:outline-(--bright-blue)
                      focus-visible:outline-offset-[3px]
                      sm:py-[0.4rem] sm:px-[0.85rem] sm:text-[0.88rem]"
         >
