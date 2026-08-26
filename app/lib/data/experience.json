@@ -34,7 +34,13 @@
       "company": "Capital One",
       "location": "toronto, ON",
       "description": "Working on the Capital One Travel App to make travelling easier !",
-      "bullets": [],
+      "bullets": [
+        "Built a native iOS gamification feature for 1.6M+ users, using reactive state management, custom Bazel tooling and plugin architecture across a large-scale mobile monorepo.",
+        "Reduced Product’s emergency-alert setup to <5 minutes by partnering with Product to build a full-stack SwiftUI, FastAPI, and DynamoDB system for customizable in-app alerts with deep-link routing.",
+        "Cut app-wide memory and CPU usage by 25% through optimizing asynchronous AVAudioEngine processing, SwiftUI rendering, and app lifecycle management to improve performance on older devices.",
+        "Modernized 3+ legacy iOS components using ViewBuilder composition and scoped state updates, aligning with Capital One design standards and Apple HIG.",
+        "Automated validation of 6+ user flows by writing XCUI end-to-end tests with a <90-second runtime in pipelines."
+      ],
       "img": "/expImages/c1elbem.png",
       "date": "summer 2026"
     },
