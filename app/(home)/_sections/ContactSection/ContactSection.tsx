@@ -9,8 +9,8 @@ export default function ContactSection() {
       className="w-full px-4 pb-20 pt-20 sm:px-8 md:px-12 lg:px-16 xl:px-20"
     >
       <div className="mx-auto w-full max-w-6xl">
-        <div className="flex w-full items-start justify-between gap-4 sm:gap-8 lg:gap-16">
-          <div className="flex w-full min-w-0 flex-col gap-5 text-(--dark-blue) lg:max-w-2xl lg:gap-8">
+        <div className="flex w-full flex-col items-start gap-10 sm:gap-12 lg:flex-row lg:justify-between lg:gap-16">
+          <div className="order-2 flex w-full min-w-0 flex-col gap-5 text-(--dark-blue) lg:order-1 lg:max-w-2xl lg:gap-8">
             <a
               href="https://www.linkedin.com/in/kriishap"
               target="_blank"
@@ -46,7 +46,7 @@ export default function ContactSection() {
             </a>
           </div>
 
-          <div className="w-auto shrink-0 text-right lg:pt-2">
+          <div className="order-1 w-full text-right lg:order-2 lg:w-auto lg:shrink-0 lg:pt-2">
             <h2 className="text-[clamp(3.125rem,13vw,7.5rem)] leading-[0.95] text-(--dull-blue)">
               contact
             </h2>

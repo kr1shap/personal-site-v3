@@ -50,13 +50,13 @@ export default function ThoughtsPage() {
   );
 
   return (
-    <div className="min-h-screen w-full py-20 px-8 bg-[#f6f7ed]">
+    <div className="min-h-screen w-full overflow-x-clip bg-[#f6f7ed] px-4 py-20 sm:px-8">
       <div className="max-w-5xl mx-auto">
         <div className="mb-12 text-left">
-          <h1 className="text-[100px] leading-none text-[#456395]">
+          <h1 className="text-[clamp(4.75rem,20vw,6.25rem)] leading-none text-[#456395]">
             krisha&apos;s thoughts
           </h1>
-          <p className="text-[28px] mt-1 text-[#757272]">
+          <p className="mt-1 text-[clamp(1.55rem,7vw,1.75rem)] leading-snug text-[#757272]">
             some scattered thoughts ; drag to play, wheel to zoom, click to read :)
           </p>
         </div>

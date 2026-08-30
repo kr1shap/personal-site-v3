@@ -34,8 +34,7 @@ export default function AboutSection() {
             </p>
 
             <p>
-              Currently interning @ capital one as a <u>mobile engineer</u> and incoming @
-              cpp investments as a part of their <u>tech & data program</u>!
+              incoming @ cpp investments as a software engineer intern under public markets!
             </p>
           </div>
         </div>

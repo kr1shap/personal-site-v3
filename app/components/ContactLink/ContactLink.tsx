@@ -18,7 +18,7 @@ interface ContactLinkProps {
 
 export default function ContactLink({ text, logoSrc, symbol }: ContactLinkProps) {
   return (
-    <div className="inline-flex w-fit items-center gap-1.5">
+    <div className="inline-flex max-w-full items-center gap-1.5">
       {symbol ? (
         <div
           className="flex h-8 w-8 items-center justify-center text-(--dull-blue)"
@@ -45,8 +45,8 @@ export default function ContactLink({ text, logoSrc, symbol }: ContactLinkProps)
       <p
         className="
           m-0 text-(--dark-blue)
-          text-[clamp(1.6rem,4.8vw,2.35rem)]
-          leading-none text-right whitespace-nowrap
+          text-[clamp(1.35rem,4.8vw,2.35rem)]
+          leading-none text-right break-all sm:break-normal sm:whitespace-nowrap
           [text-shadow:0_-1px_8px_rgba(69,99,149,0.35)]
         "
       >
