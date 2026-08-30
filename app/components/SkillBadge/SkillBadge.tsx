@@ -18,12 +18,12 @@ interface SkillBadgeProps {
 export default function SkillBadge({ name, imageSrc }: SkillBadgeProps) {
   return (
     <div className="inline-flex w-fit flex-col items-center">
-      <div className="relative w-28 h-28 overflow-hidden shrink-0">
+      <div className="relative size-20 overflow-hidden shrink-0 sm:size-24 lg:size-28">
         <Image
           src={imageSrc || "/lumaBlue.png"}
           alt={`${name} icon`}
           fill
-          sizes="112px"
+          sizes="(max-width: 640px) 80px, (max-width: 1024px) 96px, 112px"
           className="w-full h-full object-cover"
           onError={(event) => {
             (event.currentTarget as HTMLImageElement).src = "/lumaBlue.png";
