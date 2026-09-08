@@ -1,6 +1,20 @@
 {
   "mobile": [
     {
+      "title": "moji",
+      "stack": "Swift, SwiftUI, SwiftData, Core Graphics, AppKit",
+      "description": "Not really a mobile project, but a native macOS menu-bar companion that replaces custom emoji shortcodes wherever you type.",
+      "bullets": [
+        "Built a native menu-bar workflow for creating, editing, enabling, and disabling custom :alias: → emoji shortcuts.",
+        "Implemented global shortcode detection with a Core Graphics event tap and a bounded state machine that handles backspace, navigation keys, modifiers, repeated keys, and timeouts.",
+        "Persisted validated shortcuts with SwiftData and maintained an in-memory runtime index for fast lookup during typing.",
+        "Replaced matched shortcodes through synthesized keystrokes and temporary pasteboard writes while making a best-effort attempt to restore clipboard contents."
+      ],
+      "img": "/moji.png",
+      "url": "https://github.com/kr1shap/moji",
+      "date": "september 2026"
+    },
+    {
       "title": "Smart Air",
       "stack": "Java, XML, Firebase, Android Studio, Mockito",
       "description": "Developed a kid-friendly Android app for asthma management, with parent management and provider viewing. Led the project as Scrum Master and implemented robust testing and architecture patterns.",
