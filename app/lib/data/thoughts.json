@@ -246,6 +246,81 @@
           "text": "i hope i at least have the motivation to finish this. but the most fun part for me here was creating the designs."
         }
       ]
+    },
+    {
+      "id": 12,
+      "type": "article",
+      "title": "how i failed my first big tech interview",
+      "preview": "i made it to the final interview loop at a dream company, prepared for two weeks straight, and somehow lost the internship in the talking interview...",
+      "position": { "x": 78, "y": 100, "rotation": 3, "z": 3 },
+      "date": "october 26 2026",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "the company was pretty big (so i consider it big tech), and it was a dream company of mine because i've been using their consumer products for years. i vibe with their product and their engineering methods."
+        },
+        {
+          "type": "heading",
+          "text": "the timeline"
+        },
+        {
+          "type": "list",
+          "items": [
+            "a lil bit before late september: i got rejected from their winter position",
+            "late september: i got the OA for summer after reapplying with a better resume. keep in mind, this was after i got rejected from r1 at another company i blanked out on lmao",
+            "a few days later: said fk it, we ball, and did the OA",
+            "right after: got invited for the VO (three rounds: one technical, one AI-assisted, and one behavioural)"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "and holy shi was i panicking."
+        },
+        {
+          "type": "paragraph",
+          "text": "for two weeks, i basically neglected every single thing to start prepping for this interview. an insane amount of practical OOD in python, mocks with my friends (who i bribed with food), and learning react again (cuz frankly i don't know much)."
+        },
+        {
+          "type": "paragraph",
+          "text": "i was insanely tired during those two weeks and really wanted it to end."
+        },
+        {
+          "type": "heading",
+          "text": "the VO"
+        },
+        {
+          "type": "paragraph",
+          "text": "i got to the VO day and did all three interviews. the technicals went well. i really vibed with one of the interviewers because he went to my campus."
+        },
+        {
+          "type": "paragraph",
+          "text": "but i was very iffy about my BEHAVIOURAL (yes, the easy round) because i got quite nervous around the interviewer. he was kind of straightforward and blunt. i ended up rambling a little bit, and he cut me off a few times, which was probably the reason why i got rejected. my answers just weren't that good."
+        },
+        {
+          "type": "paragraph",
+          "text": "a week later, i got the rejection while sitting in my GO train going home. i was very, very, very sad. like holy crap, was i sad."
+        },
+        {
+          "type": "paragraph",
+          "text": "i couldn't believe my pitfall was the TALKING INTERVIEW??? WHERE YOU'RE MEANT TO BE YOURSELF AND TALK??? HOW CAN THAT BE HARD???"
+        },
+        {
+          "type": "paragraph",
+          "text": "idk, but it cost me the internship at my dream company in the usa."
+        },
+        {
+          "type": "heading",
+          "text": "what i learned"
+        },
+        {
+          "type": "paragraph",
+          "text": "sometimes you win and sometimes you lose. prepare as much as you can, but don't let the nerves take over the part where you're supposed to just be yourself and talk."
+        },
+        {
+          "type": "paragraph",
+          "text": "tldr: sometimes you win and sometimes you lose. and don't get nervous."
+        }
+      ]
     }
   ]
 }
