@@ -2,7 +2,6 @@ import Hero from "./_sections/Hero/Hero";
 import AboutSection from "./_sections/AboutSection/AboutSection";
 import VolunteerSection from "./_sections/VolunteerSection/VolunteerSection";
 import ExperienceSection from "./_sections/ExperienceSection/ExperienceSection";
-import MusicSection from "./_sections/MusicSection/MusicSection";
 import ProjectsSection from "./_sections/ProjectsSection/ProjectsSection";
 import SkillsSection from "./_sections/SkillsSections/SkillsSection";
 import ContactSection from "./_sections/ContactSection/ContactSection";
@@ -28,7 +27,6 @@ export default function Home() {
         <VolunteerSection entries={volunteerData.volunteer} />
         <ExperienceSection entries={experienceData.experience} />
         <ProjectsSection projects={projectsData} />
-        <MusicSection />
         <SkillsSection skillSet={skillSetData} />
         <ContactSection />
       </div>

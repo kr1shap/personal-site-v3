@@ -1,10 +1,7 @@
-import Link from "next/link";
 import BoardCanvas from "./components/BoardCanvas/BoardCanvas";
+import ThoughtPreviewCard from "./components/ThoughtPreviewCard/ThoughtPreviewCard";
 import { getThoughtsData } from "@/app/lib/portfolioData";
-import {
-  slugifyArticleTitle,
-  type ArticleThought,
-} from "@/app/lib/types/thoughts";
+import type { ArticleThought } from "@/app/lib/types/thoughts";
 
 /** Tailwind classnames that don't change between breakpoints. */
 const hintBase =
@@ -51,12 +48,12 @@ export default function ThoughtsPage() {
 
   return (
     <div className="min-h-screen w-full overflow-x-clip bg-[#f6f7ed] px-4 py-20 sm:px-8">
-      <div className="max-w-5xl mx-auto">
-        <div className="mb-12 text-left">
-          <h1 className="text-[clamp(4.75rem,20vw,6.25rem)] leading-none text-[#456395]">
+      <div className="-mx-4 px-4 sm:-mx-8 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+        <div className="mx-auto mb-12 w-full max-w-6xl text-left">
+          <h1 className="text-[clamp(4.75rem,20vw,6.25rem)] leading-[0.95] text-[#456395]">
             krisha&apos;s thoughts
           </h1>
-          <p className="mt-1 text-[clamp(1.55rem,7vw,1.75rem)] leading-snug text-[#757272]">
+          <p className="-mt-1 text-[clamp(1.5rem,4.2vw,2.5rem)] leading-none text-[#757272]">
             some scattered thoughts ; drag to play, wheel to zoom, click to read :)
           </p>
         </div>
@@ -104,30 +101,9 @@ export default function ThoughtsPage() {
         </div>
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {articles.map((article) => {
-            const slug = slugifyArticleTitle(article.title);
-
-            return (
-              <Link
-                key={article.id}
-                href={`/thoughts/${slug}`}
-                className="group flex min-h-[10.5rem] flex-col rounded-[0.5rem] border-2 border-[#456395]/35 bg-[#fbf7ee] px-5 py-4 text-[#1f2545] no-underline shadow-[3px_4px_10.4px_0px_rgba(69,99,149,0.18)] transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-[#456395] hover:shadow-[3px_7px_18px_0px_rgba(69,99,149,0.24)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#145bd2]"
-              >
-                <span className="mb-2 text-[0.9rem] font-semibold lowercase tracking-[0.06em] text-[#456395]/75">
-                  {article.date ?? "undated"}
-                </span>
-                <h3 className="m-0 text-[2rem] leading-[1.02] text-[#1c4b9a]">
-                  {article.title}
-                </h3>
-                <p className="mb-4 mt-3 line-clamp-3 text-[1.05rem] leading-snug text-[#4a4f73]">
-                  {article.preview}
-                </p>
-                <span className="mt-auto text-[1rem] font-semibold text-[#456395] transition-colors group-hover:text-[#145bd2]">
-                  open thought →
-                </span>
-              </Link>
-            );
-          })}
+          {articles.map((article) => (
+            <ThoughtPreviewCard key={article.id} thought={article} />
+          ))}
         </div>
       </section>
     </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { DesignItem } from "@/app/lib/types/design";
+import Image from "next/image";
 
 function Placeholder({ color, label }: { color: string; label: string }) {
   return (
@@ -13,25 +14,32 @@ function Placeholder({ color, label }: { color: string; label: string }) {
   );
 }
 
-function GridImage({ item }: { item: DesignItem }) {
-  if (item.imageUrl) {
+function GridImage({ item, preload }: { item: DesignItem; preload: boolean }) {
+  const image = item.images[0];
+  if (image) {
     return (
-      <img
-        src={item.imageUrl}
-        alt={item.title}
+      <Image
+        src={image.src}
+        alt={image.alt}
+        fill
+        sizes="(min-width: 1088px) 323px, (min-width: 884px) calc((100vw - 104px) / 3), (min-width: 604px) calc((100vw - 84px) / 2), calc(100vw - 64px)"
+        preload={preload}
+        loading={preload ? undefined : "lazy"}
         className="w-full h-full object-cover"
       />
     );
   }
-  return <Placeholder color={item.previewColor} label="add imageUrl" />;
+  return <Placeholder color={item.previewColor} label={item.title} />;
 }
 
 export default function DesignCard({
   item,
   onClick,
+  preload = false,
 }: {
   item: DesignItem;
   onClick: () => void;
+  preload?: boolean;
 }) {
   //Compute aspect class
   const aspectClass =
@@ -56,7 +64,7 @@ export default function DesignCard({
     >
       {/* image fills card */}
       <div className="absolute inset-0">
-        <GridImage item={item} />
+        <GridImage item={item} preload={preload} />
       </div>
 
       {/* hover overlay */}

@@ -1,32 +1,41 @@
 "use client";
 
 import { BiZoomIn } from "react-icons/bi";
-import { DesignItem } from "@/app/lib/types/design";
+import Image from "next/image";
+import { DesignImage } from "@/app/lib/types/design";
 
 export default function ModalImage({
-  item,
+  image,
+  isPortrait,
+  previewColor,
   onEnlarge,
 }: {
-  item: DesignItem;
+  image: DesignImage | undefined;
+  isPortrait: boolean;
+  previewColor: string;
   onEnlarge: () => void;
 }) {
-  const isPortrait = item.orientation === "portrait";
   const imageFrameClasses = isPortrait
-    ? "max-h-[70vh]"
-    : "max-h-[44vh] sm:max-h-[52vh]";
+    ? "h-[46dvh] sm:h-[70dvh]"
+    : "h-[40dvh] sm:h-[52dvh]";
 
-  if (item.imageUrl) {
+  if (image) {
     return (
       <button
         type="button"
         onClick={onEnlarge}
-        aria-label={`Enlarge ${item.title}`}
-        className={`group relative flex w-full cursor-zoom-in items-center justify-center border-0 bg-transparent p-0 ${imageFrameClasses}`}
+        aria-label={`Enlarge ${image.alt}`}
+        className={`group relative flex w-full cursor-zoom-in items-center justify-center overflow-hidden rounded-b-3xl border-0 bg-transparent p-0 ${imageFrameClasses}`}
+        style={{ background: previewColor }}
       >
-        <img
-          src={item.imageUrl}
-          alt={item.title}
-          className="block h-auto max-h-full w-auto max-w-full object-contain"
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          sizes={isPortrait ? "(min-width: 640px) 448px, calc(100vw - 32px)" : "(min-width: 640px) 780px, calc(100vw - 32px)"}
+          loading="eager"
+          className="block h-auto max-h-full w-auto max-w-full rounded-b-3xl object-contain"
         />
         <span className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-opacity duration-150 group-hover:bg-black/10 group-hover:opacity-100">
           <span className="flex items-center gap-1.5 rounded-full bg-[rgba(246,247,237,0.9)] px-3 py-1 text-[13px] text-[#456395] backdrop-blur-sm">
@@ -38,10 +47,10 @@ export default function ModalImage({
   }
   return (
     <div
-      className={`flex w-full items-center justify-center ${
+      className={`flex w-full items-center justify-center rounded-b-3xl ${
         isPortrait ? "min-h-100" : "min-h-65"
       } ${imageFrameClasses}`}
-      style={{ background: item.previewColor }}
+      style={{ background: previewColor }}
     ></div>
   );
 }

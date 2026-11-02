@@ -33,8 +33,17 @@ export default function CustomCursor() {
 
     const cursorEl = cursorRef.current;
     const dotEl = dotRef.current;
-    cursorEl.style.opacity = "1";
-    dotEl.style.opacity = "1";
+    const root = document.documentElement;
+    let visible = false;
+
+    const hideCursor = () => {
+      visible = false;
+      root.classList.remove("custom-cursor-active");
+      cursorEl.style.opacity = "0";
+      dotEl.style.opacity = "0";
+      cursorEl.classList.remove("is-hover-interactive", "is-pressed");
+      dotEl.classList.remove("is-hover-interactive", "is-pressed");
+    };
 
     const isInteractiveTarget = (target: EventTarget | null) => {
       const element =
@@ -66,6 +75,17 @@ export default function CustomCursor() {
       targetXRef.current = event.clientX;
       targetYRef.current = event.clientY;
 
+      if (!visible) {
+        currentXRef.current = event.clientX;
+        currentYRef.current = event.clientY;
+        cursorEl.style.transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0)`;
+        dotEl.style.transform = `translate3d(calc(${event.clientX}px - 50%), calc(${event.clientY}px - 50%), 0)`;
+        cursorEl.style.opacity = "1";
+        dotEl.style.opacity = "1";
+        root.classList.add("custom-cursor-active");
+        visible = true;
+      }
+
       if (isInteractiveTarget(event.target)) {
         cursorEl.classList.add("is-hover-interactive");
         dotEl.classList.add("is-hover-interactive");
@@ -73,18 +93,6 @@ export default function CustomCursor() {
         cursorEl.classList.remove("is-hover-interactive");
         dotEl.classList.remove("is-hover-interactive");
       }
-    };
-
-    const handleMouseEnter = () => {
-      cursorEl.style.opacity = "1";
-      dotEl.style.opacity = "1";
-    };
-
-    const handleMouseLeave = () => {
-      cursorEl.style.opacity = "0";
-      dotEl.style.opacity = "0";
-      cursorEl.classList.remove("is-hover-interactive", "is-pressed");
-      dotEl.classList.remove("is-hover-interactive", "is-pressed");
     };
 
     const handleMouseDown = (event: MouseEvent) => {
@@ -100,24 +108,25 @@ export default function CustomCursor() {
     };
 
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
-    window.addEventListener("mouseenter", handleMouseEnter, { passive: true });
-    window.addEventListener("mouseleave", handleMouseLeave, { passive: true });
+    window.addEventListener("mouseenter", handleMouseMove, { passive: true });
+    window.addEventListener("mouseleave", hideCursor, { passive: true });
     window.addEventListener("mousedown", handleMouseDown, { passive: true });
     window.addEventListener("mouseup", handleMouseUp, { passive: true });
-    window.addEventListener("blur", handleMouseUp, { passive: true });
+    window.addEventListener("blur", hideCursor, { passive: true });
 
     rafRef.current = window.requestAnimationFrame(animate);
 
     return () => {
+      hideCursor();
       if (rafRef.current) {
         window.cancelAnimationFrame(rafRef.current);
       }
       window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseenter", handleMouseEnter);
-      window.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener("mouseenter", handleMouseMove);
+      window.removeEventListener("mouseleave", hideCursor);
       window.removeEventListener("mousedown", handleMouseDown);
       window.removeEventListener("mouseup", handleMouseUp);
-      window.removeEventListener("blur", handleMouseUp);
+      window.removeEventListener("blur", hideCursor);
     };
   }, []);
 

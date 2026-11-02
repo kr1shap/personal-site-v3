@@ -32,10 +32,6 @@ export default function AboutSection() {
               I do a few things; being a part of many cool clubs and a past
               undergraduate TA for MATA22 @ UTSC!
             </p>
-
-            <p>
-              incoming @ cpp investments as a software engineer intern under public markets!
-            </p>
           </div>
         </div>
       </div>

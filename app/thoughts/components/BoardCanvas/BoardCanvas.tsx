@@ -48,7 +48,7 @@ const BOARD_HEIGHT = 900;
 const CARD_SIZE: Record<Thought["type"], { w: number; h: number }> = {
   sticker: { w: 88, h: 88 },
   sticky: { w: 184, h: 168 },
-  article: { w: 296, h: 240 },
+  article: { w: 320, h: 256 },
 };
 
 /** Anchor point per type — used to compute each card's bbox from its % position. */

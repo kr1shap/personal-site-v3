@@ -1,9 +1,16 @@
+export interface DesignImage {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
 export interface DesignItem {
   id: number;
   title: string;
   subtitle: string;
   tool: "figma" | "canva" | "figma + canva";
-  imageUrl: string;
+  images: DesignImage[];
   previewColor: string;
   orientation: "landscape" | "portrait" | "square";
   year: string;
