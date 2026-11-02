@@ -1,11 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import {
-  slugifyArticleTitle,
-  type ArticleThought,
-} from "@/app/lib/types/thoughts";
+import type { ArticleThought } from "@/app/lib/types/thoughts";
+import ThoughtPreviewCard from "../ThoughtPreviewCard/ThoughtPreviewCard";
 
 interface Props {
   thought: ArticleThought;
@@ -14,13 +11,11 @@ interface Props {
 /**
  * ArticleCard
  * -----------
- * The card itself is a `motion.div` so framer-motion's whileHover /
- * whileTap / spring work. Next's `<Link>` is wrapped *inside* it, not
- * the other way around (i.e. we deliberately do NOT use
- * `motion.create(Link)`). Reasons:
+ * Adds board positioning, motion, and tape around the same preview card
+ * used in the article quick links below the board.
  */
 export default function ArticleCard({ thought }: Props) {
-  const { position, title, preview, date } = thought;
+  const { position } = thought;
   const rotation = position.rotation ?? 0;
   const prefersReducedMotion = useReducedMotion();
   const hoverScale = prefersReducedMotion ? 1 : 1.04;
@@ -30,13 +25,10 @@ export default function ArticleCard({ thought }: Props) {
     ? { duration: 0.15 }
     : { type: "spring" as const, stiffness: 240, damping: 22 };
 
-  const slug = slugifyArticleTitle(title);
-  const titleId = `article-title-${slug}`;
-
   return (
     <motion.div
       data-interactive=""
-      className="absolute flex w-74 origin-center flex-col overflow-visible rounded-[1.875rem] border-4 border-[#456395] bg-[#f6f7ed] p-0 text-[#1c1c2e] outline-none will-change-transform shadow-[3px_4px_10.4px_0px_rgba(69,99,149,0.45)]"
+      className="absolute h-64 w-80 origin-center overflow-visible will-change-transform"
       style={{
         left: `${position.x}%`,
         top: `${position.y}%`,
@@ -53,34 +45,11 @@ export default function ArticleCard({ thought }: Props) {
       whileTap={{ x: "-50%", y: "-50%", scale: tapScale }}
       transition={spring}
     >
-      <Link
-        href={`/thoughts/${slug}`}
-        className="flex h-full flex-col cursor-pointer rounded-[1.625rem] text-inherit no-underline outline-none"
-        aria-labelledby={titleId}
-      >
-        <div className="absolute left-1/2 top-[-0.6rem] z-1 grid h-[1.05rem] w-32 -translate-x-1/2 -rotate-3 place-items-center border-l border-r border-dashed border-black/7 bg-(--tape) text-(--ink) shadow-[0_1px_2px_rgba(0,0,0,0.14)]">
-          <span className="rotate-3 text-[0.95rem] leading-none text-[#1f254599]" />
-        </div>
-        <header className="relative rounded-t-[1.625rem] bg-[#1c4b9a] px-4 pb-[0.6rem] pt-[0.7rem] text-white">
-          <h2 id={titleId} className="m-0 text-[1.95rem] leading-[1.05] font-semibold tracking-[0.005em]">
-            {title}
-          </h2>
-          {date ? (
-            <span className="mt-[0.2rem] block text-[0.7rem] font-medium lowercase tracking-[0.06em] text-white/65">
-              {date}
-            </span>
-          ) : null}
-          <span className="pointer-events-none absolute bottom-0 left-[0.8rem] right-[0.8rem] h-0.5 bg-[linear-gradient(90deg,transparent,rgba(255,225,150,0.75),transparent)]" />
-        </header>
-        <div className="rounded-b-[1.625rem] px-[1.1rem] pb-[1.05rem] pt-[0.95rem]">
-          <p className="m-0 mb-[0.7rem] text-[0.92rem] leading-[1.55] italic text-[#29293f]">
-            {preview}
-          </p>
-          <span className="text-[0.82rem] font-semibold tracking-[0.01em] text-[#456395]">
-            read more →
-          </span>
-        </div>
-      </Link>
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-[-0.6rem] z-10 h-[1.05rem] w-32 -translate-x-1/2 -rotate-3 border-l border-r border-dashed border-black/7 bg-(--tape) shadow-[0_1px_2px_rgba(0,0,0,0.14)]"
+      />
+      <ThoughtPreviewCard thought={thought} headingAs="h2" className="h-full" />
     </motion.div>
   );
 }

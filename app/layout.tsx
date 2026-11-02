@@ -4,7 +4,6 @@ import { Analytics } from "@vercel/analytics/next";
 import CustomCursor from "@/app/components/Decoration/CustomCursor";
 import Navbar from "@/app/components/StickyComponents/Navbar";
 import Footer from "@/app/components/StickyComponents/Footer";
-import InitialLoadGate from "@/app/components/InitialLoadGate/InitialLoadGate";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -33,13 +32,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
+    // Browser cursor extensions can inject attributes on these two elements
+    // before hydration. Keep suppression here so page content is still checked.
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CustomCursor />
         <Navbar />
-        <InitialLoadGate>{children}</InitialLoadGate>
+        {children}
         <Footer />
         <Analytics />
       </body>

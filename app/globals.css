@@ -69,8 +69,8 @@ section[id] {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  body,
-  body * {
+  html.custom-cursor-active body,
+  html.custom-cursor-active body * {
     cursor: none !important;
   }
 

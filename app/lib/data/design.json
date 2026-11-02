@@ -5,7 +5,7 @@
       "title": "GenAI Genesis Banner Design",
       "subtitle": "2026 biggest ai hackathon !",
       "tool": "figma",
-      "imageUrl": "/designImages/genai_genesis_banner.png",
+      "images": [{ "src": "/designImages/genai_genesis_banner.png", "alt": "GenAI Genesis AI in the City hackathon banner", "width": 2640, "height": 6240 }],
       "previewColor": "#cddaf4",
       "orientation": "portrait",
       "year": "2026",
@@ -17,7 +17,7 @@
       "title": "workshop graphics - utmist",
       "subtitle": "instagram templates",
       "tool": "canva",
-      "imageUrl": "/designImages/utmist_workshop.png",
+      "images": [{ "src": "/designImages/utmist_workshop.png", "alt": "UTMIST workshop Instagram graphic", "width": 1080, "height": 1350 }],
       "previewColor": "#dde8f9",
       "orientation": "portrait",
       "year": "2025",
@@ -30,7 +30,7 @@
       "title": "conference graphics - gdg utsc",
       "subtitle": "instagram templates",
       "tool": "canva",
-      "imageUrl": "/designImages/bwai_carousel.png",
+      "images": [{ "src": "/designImages/bwai_carousel.png", "alt": "GDG UTSC Build with AI conference carousel graphics", "width": 3240, "height": 1350 }],
       "previewColor": "#dde8f9",
       "orientation": "square",
       "year": "2026",
@@ -43,13 +43,38 @@
       "title": "Calendrier",
       "subtitle": "ux design flow",
       "tool": "figma",
-      "imageUrl": "/designImages/calendrierUIFlow.png",
+      "images": [{ "src": "/designImages/calendrierUIFlow.png", "alt": "Calendrier notebook, task, and sticky-note interface flow", "width": 1510, "height": 764 }],
       "previewColor": "#f7f0df",
       "orientation": "landscape",
       "year": "2026",
       "details": "a horizontal figma ux flow for calendrier, exploring the notebook, task, and sticky-note states in one cohesive interface.",
       "tags": ["calendar", "ux", "product design"],
       "link": "https://www.figma.com/design/XFjDUgFkPvfj4FlbuAMsiL/Calendrier---UX-Design?node-id=0-1&t=wRl4krycs4TaTA5E-1"
+    },
+    {
+      "id": 5,
+      "title": "stripe networking + eigenai",
+      "subtitle": "event graphics - utmist",
+      "tool": "figma + canva",
+      "images": [
+        {
+          "src": "/designImages/utmist-stripe-recruiting-event.png",
+          "alt": "Purple gradient UTMIST x Stripe recruiting event poster",
+          "width": 1810,
+          "height": 2263
+        },
+        {
+          "src": "/designImages/utmist-stripe-networking-booth.png",
+          "alt": "Stripe networking booth poster with an iridescent ring and blue gradients",
+          "width": 2160,
+          "height": 2700
+        }
+      ],
+      "previewColor": "#3020b3",
+      "orientation": "portrait",
+      "year": "2026",
+      "details": "these were pretty fun to do as i played around with gradients and some super cool assets my team already had made beforehand for eigenai for utmist!",
+      "tags": ["social media"]
     }
   ]
 }

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeroTypewriter from "./HeroTypewriter";
+import HeroRoles from "./HeroRoles";
 
 export default function Hero() {
   return (
@@ -40,7 +40,7 @@ export default function Hero() {
             cs + stats + linguistics @ uoft
           </p>
           <div className="text-[clamp(0.75rem,3.5vw,0.9375rem)] leading-snug mt-0.5">
-            <HeroTypewriter />
+            <HeroRoles />
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ export default function Hero() {
               cs + stats + linguistics @ uoft
             </p>
             <div className="text-[clamp(1.1rem,2vw,2rem)] leading-tight mt-1">
-              <HeroTypewriter />
+              <HeroRoles />
             </div>
           </div>
         </div>

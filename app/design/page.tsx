@@ -28,10 +28,11 @@ export default function DesignPage() {
           </div>
 
           <div className="grid gap-5 grid-cols-[repeat(auto-fill,minmax(260px,1fr))]">
-            {designData.map((item) => (
+            {designData.map((item, index) => (
               <DesignCard
                 key={item.id}
                 item={item}
+                preload={index === 0}
                 onClick={() => setSelected(item)}
               />
             ))}
@@ -41,7 +42,7 @@ export default function DesignPage() {
       </div>
 
       {selected && (
-        <DesignModal item={selected} onClose={() => setSelected(null)} />
+        <DesignModal key={selected.id} item={selected} onClose={() => setSelected(null)} />
       )}
     </>
   );
