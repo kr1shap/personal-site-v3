@@ -3,8 +3,7 @@
 export default function Loading() {
   return (
     <main
-      className="min-h-screen w-full bg-(--cream) px-6 pt-28 pb-10"
-      style={{ animation: "fadeIn 220ms ease" }}
+      className="min-h-screen w-full bg-(--cream) px-6 pt-28 pb-10 motion-safe:animate-[fadeIn_220ms_ease]"
     >
       <section className="mx-auto flex min-h-[70vh] w-full max-w-3xl flex-col items-center justify-center text-center">
         <div className="relative">
@@ -19,9 +18,9 @@ export default function Loading() {
         </div>
 
         <div className="mt-8 flex items-center gap-2">
-          <span className="h-3 w-3 rounded-full bg-(--bright-blue) animate-bounce" />
-          <span className="h-3 w-3 rounded-full bg-(--dull-blue) animate-bounce [animation-delay:120ms]" />
-          <span className="h-3 w-3 rounded-full bg-(--dark-blue) animate-bounce [animation-delay:240ms]" />
+          <span className="h-3 w-3 rounded-full bg-(--bright-blue) motion-safe:animate-bounce" />
+          <span className="h-3 w-3 rounded-full bg-(--dull-blue) motion-safe:animate-bounce [animation-delay:120ms]" />
+          <span className="h-3 w-3 rounded-full bg-(--dark-blue) motion-safe:animate-bounce [animation-delay:240ms]" />
         </div>
 
         <p className="mt-5 text-[clamp(1.05rem,3.2vw,1.35rem)] text-(--dull-grey)">

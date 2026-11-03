@@ -42,7 +42,7 @@ export default function SkillsSection({ skillSet }: SkillsSectionProps) {
         </div>
 
         {/* Category buttons */}
-        <div className="flex justify-center flex-wrap gap-x-4 gap-y-3 sm:gap-x-6 sm:gap-y-4 mb-10 lg:mb-14">
+        <div className="flex justify-center flex-wrap gap-x-4 gap-y-3 sm:gap-x-6 sm:gap-y-4 mb-8 lg:mb-12">
           {CATEGORY_KEYS.map((key) => {
             const isActive = activeCategory === key;
             return (
@@ -68,7 +68,7 @@ export default function SkillsSection({ skillSet }: SkillsSectionProps) {
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={activeCategory}
-            className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-x-4 gap-y-6 sm:gap-x-6 sm:gap-y-8 justify-items-center"
+            className="mx-auto grid w-full max-w-xs grid-cols-3 justify-items-center gap-x-3 gap-y-6 sm:max-w-lg sm:grid-cols-4 sm:gap-x-4 md:max-w-2xl md:grid-cols-5 lg:max-w-4xl lg:grid-cols-6"
             {...getSkillsGridMotionProps(shouldReduceMotion)}
           >
             {activeSkills.map((skill, index) => (

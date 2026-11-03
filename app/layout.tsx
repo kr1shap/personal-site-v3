@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import CustomCursor from "@/app/components/Decoration/CustomCursor";
 import Navbar from "@/app/components/StickyComponents/Navbar";
 import Footer from "@/app/components/StickyComponents/Footer";
+import InitialLoadGate from "@/app/components/InitialLoadGate/InitialLoadGate";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -41,7 +42,7 @@ export default function RootLayout({
       >
         <CustomCursor />
         <Navbar />
-        {children}
+        <InitialLoadGate>{children}</InitialLoadGate>
         <Footer />
         <Analytics />
       </body>

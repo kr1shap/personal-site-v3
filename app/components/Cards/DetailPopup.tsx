@@ -14,6 +14,7 @@
 import { useEffect } from "react";
 import type { ExperienceEntry } from "../../lib/types/experience";
 import type { ProjectEntry } from "../../lib/types/projects";
+import CompanyLogo from "./CompanyLogo";
 
 type DetailPopupBase = {
   isOpen: boolean;
@@ -113,24 +114,26 @@ export default function DetailPopup(props: DetailPopupProps) {
 
         {/* ---- Top section: image + meta ---- */}
         <div className="flex flex-col sm:flex-row gap-5 sm:gap-5.5 items-start sm:items-center">
-          {/* Main image — use intrinsic image sizing so the container wraps */}
-          <div
-            className="
+          {type === "experience" ? (
+            <CompanyLogo src={image} company={title} className="h-16 w-36" />
+          ) : (
+            <div
+              className="
               w-full sm:w-auto sm:max-w-[55%]
               rounded-[1.875rem] overflow-hidden shrink-0
               shadow-(--modal-shadow) flex justify-center items-center
             "
-          >
-            {/* Not using nextjs image rendering here as it somehow breaks lolll!!!!!  */}
-            <img
-              src={image}
-              alt={imageAlt}
-              className="max-w-full max-h-[60vh] h-auto block bg-(--cream) object-contain object-center"
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).src = "/lumaBlue.png";
-              }}
-            />
-          </div>
+            >
+              <img
+                src={image}
+                alt={imageAlt}
+                className="max-w-full max-h-[60vh] h-auto block bg-(--cream) object-contain object-center"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = "/lumaBlue.png";
+                }}
+              />
+            </div>
+          )}
 
           {/* Meta column */}
           <div className="flex-1 flex flex-col gap-0 min-w-0">
